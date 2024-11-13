@@ -43,18 +43,11 @@ sourceSets {
 }
 
 dependencies {
-    compileOnly("net.sourceforge.pmd:pmd-dist:7.2.0")
-
-    testImplementation("net.sourceforge.pmd:pmd-dist:7.2.0")
-    testImplementation("com.google.guava:guava:33.1.0-jre")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
-    testImplementation("org.assertj:assertj-core:3.25.3")
-    testImplementation("org.mockito:mockito-core:5.11.0")
-    testImplementation("org.mockito:mockito-junit-jupiter:5.11.0")
-
-    "integTestImplementation"("org.assertj:assertj-core:3.25.3")
-    "integTestImplementation"("org.junit.vintage:junit-vintage-engine:5.10.2")
-    "integTestImplementation"("org.spockframework:spock-core:2.3-groovy-3.0") {
+    compileOnly(libs.pmd.dist)
+    testImplementation(libs.pmd.dist)
+    testImplementation(libs.guava)
+    testImplementation(libs.bundles.testing.base)
+    "integTestImplementation"(libs.bundles.testing.integration) {
         exclude(module = "groovy-all")
     }
 }

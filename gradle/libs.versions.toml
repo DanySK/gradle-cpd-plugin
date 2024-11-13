@@ -1,29 +1,26 @@
 [versions]
-dokka = "1.9.20"
-konf = "1.1.2"
-kotest = "5.9.1"
-kotlin = "2.0.21"
-testkit = "0.9.0"
+junit = "5.10.2"
+mockito = "5.11.0"
+pmd = "7.2.0"
 
 [libraries]
-classgraph = "io.github.classgraph:classgraph:4.8.179"
-konf-yaml = { module = "com.uchuhimo:konf-yaml", version.ref = "konf" }
-kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
-kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
-kotlin-gradle-plugin-api = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-testkit = { module = "io.github.mirko-felice.testkit:core", version.ref = "testkit" }
+assertj-core = "org.assertj:assertj-core:3.25.3"
+guava = "com.google.guava:guava:33.1.0-jre"
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+pmd-dist = { module = "net.sourceforge.pmd:pmd-dist", version.ref = "pmd" }
+spock-core = "org.spockframework:spock-core:2.3-groovy-3.0"
 
 [bundles]
-kotlin-testing = [ "kotest-junit5-jvm", "kotest-assertions-core-jvm" ]
+testing-base = [ "assertj-core", "junit-jupiter", "mockito-core", "mockito-junit-jupiter" ]
+testing-integration = [ "assertj-core", "junit-vintage-engine", "spock-core" ]
 
 [plugins]
 coveralls = "com.github.kt3k.coveralls:2.11.0"
-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning:3.1.7"
 gradlePluginPublish = "com.gradle.plugin-publish:1.3.0"
-jacoco-testkit = "pl.droidsonroids.jacoco.testkit:1.0.12"
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-qa = "org.danilopianini.gradle-kotlin-qa:0.69.0"
 multiJvmTesting = "org.danilopianini.multi-jvm-test-plugin:1.3.0"
 publishOnCentral = "org.danilopianini.publish-on-central:5.1.9"
 taskTree = "com.dorongold.task-tree:4.0.0"
