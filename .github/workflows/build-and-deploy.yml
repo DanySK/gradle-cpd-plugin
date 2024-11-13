@@ -32,7 +32,7 @@ jobs:
           should-deploy: >-
             ${{
               runner.os == 'Linux'
-              && !github.event.repository.fork
+              && github.repository_owner == 'DanySK'
               && github.event_name != 'pull_request'
             }}
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
@@ -47,7 +47,7 @@ jobs:
       - build
     runs-on: ubuntu-24.04
     if: >-
-      !github.event.repository.fork
+      github.repository_owner == 'DanySK'
       && github.event_name != 'pull_request'
     steps:
       - name: Checkout
