@@ -26,8 +26,11 @@ Gradle CPD plugin
 What is it
 ----------
 
-A [Gradle](http://gradle.org) plugin to find duplicate code using [PMD][]s copy/paste detection (= [CPD][]). See also
-https://plugins.gradle.org/plugin/de.aaschmid.cpd.
+A [Gradle](http://gradle.org) plugin to find duplicate code using [PMD][]s copy/paste detection (= [CPD][]).
+This is a fork of the original project found at https://github.com/aaschmid/gradle-cpd-plugin
+where automatic updates are applied and the CI is moved to GitHub Actions.
+
+See also https://plugins.gradle.org/plugin/de.aaschmid.cpd.
 
 
 Requirements
@@ -67,7 +70,7 @@ This plugin is available using either the new [Gradle plugins DSL](https://gradl
 
 ```groovy
 plugins {
-    id 'de.aaschmid.cpd' version '3.4'
+    id 'org.danilopianini.cpd' version '3.4.0'
 }
 ```
 
@@ -83,13 +86,11 @@ buildscript {
     }
 
     dependencies {
-        classpath 'de.aaschmid:gradle-cpd-plugin:3.4'
+        classpath 'org.danilopianini:gradle-cpd-plugin:3.4.0'
     }
 }
-apply plugin: 'de.aaschmid.cpd'
+apply plugin: 'org.danilopianini.cpd'
 ```
-
-**Attention:** The plugin's groupId was changed from ```de.aaschmid.gradle.plugins``` to ```de.aaschmid``` in [v1.0][].
 
 By default, the copy-paste-detection looks at all source code of all projects which at least apply ```LifecycleBasePlugin```.
 If you use a different programming language and want to get it configured out of the box, please open an issue :-)

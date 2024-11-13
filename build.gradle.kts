@@ -5,18 +5,31 @@ import java.time.format.DateTimeFormatter
 plugins {
     groovy
     jacoco
-    id("com.github.kt3k.coveralls") version "2.11.0"
-
     `java-gradle-plugin`
-
-    id("com.gradle.plugin-publish") version "0.13.0"
+    alias(libs.plugins.coveralls)
+    alias(libs.plugins.gitSemVer)
+    alias(libs.plugins.gradlePluginPublish)
+    alias(libs.plugins.multiJvmTesting)
+    alias(libs.plugins.publishOnCentral)
+    alias(libs.plugins.taskTree)
 }
 
 description = "Gradle plugin to find duplicate code using PMDs copy/paste detection (= CPD)"
-group = "de.aaschmid"
-version = "3.5-SNAPSHOT"
+group = "org.danilopianini"
 
-val isBuildOnJenkins by extra(System.getenv("BUILD_TAG")?.startsWith("jenkins-") ?: false)
+inner class ProjectInfo {
+    val longName = "CPD Gradle Plugin"
+    val website = "https://github.com/DanySK/$name"
+    val vcsUrl = "$website.git"
+    val scm = "scm:git:$website.git"
+    val pluginImplementationClass = "de.aaschmid.gradle.plugins.cpd.CpdPlugin"
+    val tags = listOf("template", "kickstart", "example")
+}
+val info = ProjectInfo()
+
+gitSemVer {
+    buildMetadataSeparator.set("-")
+}
 
 repositories {
     mavenCentral()
@@ -46,30 +59,47 @@ dependencies {
     }
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-
-    withJavadocJar()
-    withSourcesJar()
-}
-
 jacoco {
     toolVersion = "0.8.12"
 }
 
+multiJvm {
+    jvmVersionForCompilation.set(8)
+    testByDefaultWith(latestLts, latestJavaSupportedByGradle)
+}
+
+val javaForTests: JavaToolchainSpec.() -> Unit = { languageVersion.set(JavaLanguageVersion.of(11)) }
+val javaTestCompiler = javaToolchains.compilerFor(javaForTests)
+val javaTestLauncher = javaToolchains.launcherFor(javaForTests)
+
 tasks {
-    named<Javadoc>("javadoc") {
-        if (JavaVersion.current().isJava9Compatible) {
-            (options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
-        }
+
+    val integTest by registering(Test::class) {
+        inputs.files(jar)
+        shouldRunAfter(test)
+        testClassesDirs = sourceSets.named("integTest").get().output.classesDirs
+        classpath = sourceSets.named("integTest").get().runtimeClasspath
+        useJUnitPlatform()
     }
 
+    afterEvaluate {
+        compileTestJava.configure {
+            javaCompiler.set(javaTestCompiler)
+        }
+        test.configure {
+            javaLauncher.set(javaTestLauncher)
+        }
+        integTest.configure {
+            javaLauncher.set(javaTestLauncher)
+        }
+    }
+    withType<Javadoc>().configureEach {
+        isFailOnError = false
+    }
     jar {
         manifest {
             val now = LocalDate.now()
             val today = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-
             attributes(
                     "Built-By" to "Gradle ${gradle.gradleVersion}",
                     "Built-Date" to today, // using now would destroy incremental build feature
@@ -82,32 +112,15 @@ tasks {
             )
         }
     }
-
     test {
-        ignoreFailures = isBuildOnJenkins
-
         useJUnitPlatform()
         testLogging {
             exceptionFormat = TestExceptionFormat.FULL
         }
     }
-
-    val integTest = register("integTest", Test::class) {
-        inputs.files(jar)
-        shouldRunAfter(test)
-
-        ignoreFailures = isBuildOnJenkins
-
-        testClassesDirs = sourceSets.named("integTest").get().output.classesDirs
-        classpath = sourceSets.named("integTest").get().runtimeClasspath
-
-        useJUnitPlatform()
-    }
-
     check {
         dependsOn(integTest)
     }
-
     jacocoTestReport {
         executionData(withType(Test::class).toSet())
         reports {
@@ -121,41 +134,52 @@ tasks {
 gradlePlugin {
     pluginSourceSet(sourceSets.main.get())
     testSourceSets(sourceSets.test.get(), sourceSets.named("integTest").get())
-
     plugins {
-        create("cpd") {
-            id = "de.aaschmid.cpd"
-            implementationClass = "de.aaschmid.gradle.plugins.cpd.CpdPlugin"
+        website.set(info.website)
+        vcsUrl.set(info.vcsUrl)
+        create("") {
+            id = "$group.cpd"
+            displayName = info.longName
+            description = project.description
+            implementationClass = info.pluginImplementationClass
+            tags.set(info.tags)
         }
     }
 }
 
-// -- sign and publish artifacts -------------------------------------------------------------------------------------
-
-// Steps:
-//   0. Set correct artifact version above, commit and create a tag prefixed with "v"
-//   1. Prepare ~/.gradle/gradle.properties in order to contain signing keys and required passwords for publishing
-//   2. "./gradlew build publishPlugin"
-//   3. Finish milestone and release on Github
-
-val isReleaseVersion by extra(!project.version.toString().endsWith("-SNAPSHOT"))
-
-// See documentation on https://plugins.gradle.org/docs/publish-plugin
-pluginBundle {
-    website = "https://github.com/aaschmid/gradle-cpd-plugin"
-    vcsUrl = "https://github.com/aaschmid/gradle-cpd-plugin"
-
-    description = "A Gradle plugin to find duplicate code using PMDs copy/paste detection (= CPD)."
-    tags = listOf("duplicates", "cpd", "copy-paste-detection")
-
-    (plugins) {
-        "cpd" {
-            displayName = "Gradle CPD plugin"
-        }
+signing {
+    if (System.getenv()["CI"].equals("true", ignoreCase = true)) {
+        val signingKey: String? by project
+        val signingPassword: String? by project
+        useInMemoryPgpKeys(signingKey, signingPassword)
     }
+}
 
-    mavenCoordinates {
-        groupId = project.group as String
-        artifactId = "gradle-cpd-plugin"
+/*
+ * Publication on Maven Central and the Plugin portal
+ */
+publishOnCentral {
+    projectLongName.set(info.longName)
+    projectDescription.set(description ?: TODO("Missing description"))
+    projectUrl.set(info.website)
+    scmConnection.set(info.scm)
+    repository("https://maven.pkg.github.com/DanySK/${rootProject.name}".toLowerCase(), name = "github") {
+        user.set("danysk")
+        password.set(System.getenv("GITHUB_TOKEN"))
+    }
+    publishing {
+        publications {
+            withType<MavenPublication> {
+                pom {
+                    developers {
+                        developer {
+                            name.set("Danilo Pianini")
+                            email.set("danilo.pianini@gmail.com")
+                            url.set("http://www.danilopianini.org/")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
