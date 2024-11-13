@@ -99,11 +99,11 @@ class CpdReporterTest {
 
         // Then:
         SoftAssertions.assertSoftly(softly -> {
-            softly.assertThat(contentOf(csvReportFile)).startsWith("lines,tokens,occurrences\n");
-            softly.assertThat(contentOf(csvReportFileWithoutLines)).startsWith("tokens;occurrences\n");
-            softly.assertThat(contentOf(textReportFile)).startsWith("Found a 1 line (5 tokens) duplication in the following files: \n");
-            softly.assertThat(contentOf(vsReportFile)).startsWith("Clazz1.java(1): Between lines 1 and 2\n");
-            softly.assertThat(contentOf(xmlReportFile)).startsWith("<?xml version=\"1.0\" encoding=\"ISO-8859-15\"?>\n");
+            softly.assertThat(contentOf(csvReportFile)).startsWith("lines,tokens,occurrences");
+            softly.assertThat(contentOf(csvReportFileWithoutLines)).startsWith("tokens;occurrences");
+            softly.assertThat(contentOf(textReportFile)).startsWith("Found a 1 line (5 tokens) duplication in the following files:");
+            softly.assertThat(contentOf(vsReportFile)).startsWith("Clazz1.java(1): Between lines 1 and 2");
+            softly.assertThat(contentOf(xmlReportFile)).startsWith("<?xml version=\"1.0\" encoding=\"ISO-8859-15\"?>");
         });
     }
 

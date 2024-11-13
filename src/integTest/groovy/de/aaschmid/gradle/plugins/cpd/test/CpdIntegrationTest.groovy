@@ -12,7 +12,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
         buildFile << """
             plugins {
                 id 'java'
-                id 'de.aaschmid.cpd'
+                id 'org.danilopianini.cpd'
             }
             """.stripIndent()
 
@@ -30,7 +30,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
         given:
         buildFile << """
             plugins {
-                id 'de.aaschmid.cpd'
+                id 'org.danilopianini.cpd'
                 id 'java'
             }
             """.stripIndent()
@@ -51,7 +51,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
 
         buildFile << """
             plugins {
-                id 'de.aaschmid.cpd'
+                id 'org.danilopianini.cpd'
             }
 
             project(':sub') {
@@ -87,7 +87,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
 
         buildFile << """
             plugins {
-                id 'de.aaschmid.cpd'
+                id 'org.danilopianini.cpd'
             }
 
             project(':sub') {
@@ -113,11 +113,11 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
 
         buildFile << """
             plugins {
-                id 'de.aaschmid.cpd' apply false
+                id 'org.danilopianini.cpd' apply false
             }
 
             project(':sub') {
-                apply plugin: 'de.aaschmid.cpd'
+                apply plugin: 'org.danilopianini.cpd'
                 apply plugin: 'java'
             }
             """.stripIndent()
@@ -136,7 +136,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
     def "CpdPlugin can be added using full qualified name"() {
         given:
         buildFile << createBuildScriptWithClasspathOfGradleTestKitMechanism() << """
-            apply plugin: 'de.aaschmid.cpd'
+            apply plugin: 'org.danilopianini.cpd'
             """.stripIndent()
 
         when:
@@ -218,7 +218,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
     def "executing 'Cpd' task on duplicates should fail if language does not exist"() {
         given:
         buildFile << createBuildScriptWithClasspathOfGradleTestKitMechanism() << """
-            apply plugin: 'de.aaschmid.cpd'
+            apply plugin: 'org.danilopianini.cpd'
             repositories {
                 mavenLocal()
                 mavenCentral()

@@ -1,0 +1,26 @@
+[versions]
+junit = "5.10.2"
+mockito = "5.11.0"
+pmd = "7.2.0"
+
+[libraries]
+assertj-core = "org.assertj:assertj-core:3.25.3"
+guava = "com.google.guava:guava:33.1.0-jre"
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+pmd-dist = { module = "net.sourceforge.pmd:pmd-dist", version.ref = "pmd" }
+spock-core = "org.spockframework:spock-core:2.3-groovy-3.0"
+
+[bundles]
+testing-base = [ "assertj-core", "junit-jupiter", "mockito-core", "mockito-junit-jupiter" ]
+testing-integration = [ "assertj-core", "junit-vintage-engine", "spock-core" ]
+
+[plugins]
+coveralls = "com.github.kt3k.coveralls:2.11.0"
+gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning:3.1.7"
+gradlePluginPublish = "com.gradle.plugin-publish:1.3.0"
+multiJvmTesting = "org.danilopianini.multi-jvm-test-plugin:1.3.0"
+publishOnCentral = "org.danilopianini.publish-on-central:5.1.9"
+taskTree = "com.dorongold.task-tree:4.0.0"

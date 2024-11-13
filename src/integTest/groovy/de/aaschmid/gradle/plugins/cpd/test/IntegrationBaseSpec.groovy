@@ -41,7 +41,7 @@ abstract class IntegrationBaseSpec extends Specification {
     protected File buildFileWithPluginAndRepos(List<String> additionalPlugins = [ ], boolean addRepositories = true) {
         buildFile << """
             plugins {
-                id 'de.aaschmid.cpd'
+                id 'org.danilopianini.cpd'
                 ${additionalPlugins.collect{ "id '${it}'" }.join("\n                ")}
             }
             """.stripIndent()
