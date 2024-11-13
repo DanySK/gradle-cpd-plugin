@@ -35,6 +35,7 @@ jobs:
               && github.repository_owner == 'DanySK'
               && github.event_name != 'pull_request'
             }}
+          codecov-token: ${{ secrets.CODECOV_TOKEN }}
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
           signing-key: ${{ secrets.SIGNING_KEY }}
