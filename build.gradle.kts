@@ -43,6 +43,7 @@ sourceSets {
 }
 
 dependencies {
+    implementation(gradleApi())
     compileOnly(libs.pmd.dist)
     testImplementation(libs.pmd.dist)
     testImplementation(libs.guava)
