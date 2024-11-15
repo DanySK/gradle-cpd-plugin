@@ -1,12 +1,9 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 plugins {
     groovy
     jacoco
     `java-gradle-plugin`
-    alias(libs.plugins.coveralls)
     alias(libs.plugins.gitSemVer)
     alias(libs.plugins.gradlePluginPublish)
     alias(libs.plugins.multiJvmTesting)
@@ -23,7 +20,7 @@ inner class ProjectInfo {
     val vcsUrl = "$website.git"
     val scm = "scm:git:$website.git"
     val pluginImplementationClass = "de.aaschmid.gradle.plugins.cpd.CpdPlugin"
-    val tags = listOf("template", "kickstart", "example")
+    val tags = listOf("cpd", "copy-paste", "static analysis")
 }
 val info = ProjectInfo()
 
@@ -90,32 +87,16 @@ tasks {
     withType<Javadoc>().configureEach {
         isFailOnError = false
     }
-    jar {
-        manifest {
-            val now = LocalDate.now()
-            val today = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-            attributes(
-                    "Built-By" to "Gradle ${gradle.gradleVersion}",
-                    "Built-Date" to today, // using now would destroy incremental build feature
-                    "Specification-Title" to "gradle-cpd-plugin",
-                    "Specification-Version" to project.version,
-                    "Specification-Vendor" to "Andreas Schmid, service@aaschmid.de",
-                    "Implementation-Title" to "gradle-cpd-plugin",
-                    "Implementation-Version" to project.version,
-                    "Implementation-Vendor" to "Andreas Schmid, service@aaschmid.de"
-            )
-        }
-    }
     test {
         useJUnitPlatform()
         testLogging {
             exceptionFormat = TestExceptionFormat.FULL
         }
     }
-    check {
+    check.configure {
         dependsOn(integTest)
     }
-    jacocoTestReport {
+    jacocoTestReport.configure {
         executionData(withType(Test::class).toSet())
         reports {
             xml.required.set(true)
@@ -126,7 +107,6 @@ tasks {
 }
 
 gradlePlugin {
-    pluginSourceSet(sourceSets.main.get())
     testSourceSets(sourceSets.test.get(), sourceSets.named("integTest").get())
     plugins {
         website.set(info.website)
@@ -149,6 +129,12 @@ signing {
     }
 }
 
+publishing.publications {
+    create<MavenPublication>("cpd") {
+        from(components["java"])
+    }
+}
+
 /*
  * Publication on Maven Central and the Plugin portal
  */
@@ -157,16 +143,18 @@ publishOnCentral {
     projectDescription.set(description ?: TODO("Missing description"))
     projectUrl.set(info.website)
     scmConnection.set(info.scm)
-    repository("https://maven.pkg.github.com/DanySK/${rootProject.name}".toLowerCase(), name = "github") {
-        user.set("danysk")
-        password.set(System.getenv("GITHUB_TOKEN"))
-    }
     publishing {
         publications {
             withType<MavenPublication> {
                 pom {
                     developers {
                         developer {
+                            name.set("Andreas Schmid")
+                            email.set("service@aaschmid.de")
+                        }
+                    }
+                    contributors{
+                        contributor {
                             name.set("Danilo Pianini")
                             email.set("danilo.pianini@gmail.com")
                             url.set("http://www.danilopianini.org/")
