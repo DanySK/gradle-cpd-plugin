@@ -3,5 +3,14 @@
    "extends": [
       "github>DanySK/renovate-config:gradle-plugin"
    ],
-   "includeForks": true
+   "includeForks": true,
+   "packageRules": [
+      {
+         "description": "Trigger a patch update on PMD upgrades",
+         "matchPackageNames": [
+           "/^net\\.sourceforge\\.pmd.*/"
+         ],
+         "semanticCommitScope": "core-deps"
+      }
+   ]
 }
