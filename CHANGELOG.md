@@ -1,3 +1,22 @@
+## [1.0.1](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.0...1.0.1) (2024-11-15)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v7.6.4 ([#13](https://github.com/DanySK/gradle-cpd-plugin/issues/13)) ([29d3bce](https://github.com/DanySK/gradle-cpd-plugin/commit/29d3bce9bcac6a9548d7a75ed52727aca9c02ca1))
+* **deps:** update dependency org.assertj:assertj-core to v3.26.3 ([5bb5077](https://github.com/DanySK/gradle-cpd-plugin/commit/5bb5077e13c18d13e2ced1c678adaeb3f4080a07))
+* **deps:** update junit5 monorepo to v5.10.5 ([#3](https://github.com/DanySK/gradle-cpd-plugin/issues/3)) ([d4830f1](https://github.com/DanySK/gradle-cpd-plugin/commit/d4830f109aa4e48d9f1224f10dafccdeb0dd157d))
+* **deps:** update plugin com.gradle.develocity to v3.18.2 ([97dc6ad](https://github.com/DanySK/gradle-cpd-plugin/commit/97dc6adb83c322fe09c94ce61f346bb21d5a7ca2))
+
+### Build and continuous integration
+
+* add distributionSha256Sum ([7d4ce1f](https://github.com/DanySK/gradle-cpd-plugin/commit/7d4ce1f2353e6ea837aef9cdee2926ba560ca16e))
+* always publish the build scan ([1d33a85](https://github.com/DanySK/gradle-cpd-plugin/commit/1d33a85acdfb4ee69d40ef8937e2e2ab55cdd6aa))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.16 ([2364401](https://github.com/DanySK/gradle-cpd-plugin/commit/23644014e091cc7ebe26b194d7060bb1eee32b83))
+* regenerate `gradlew.bat` ([a056273](https://github.com/DanySK/gradle-cpd-plugin/commit/a056273a40eaf517d1c8d6c40788c5eeae2eed10))
+* **release:** do not retry to release on failure ([c5c63c5](https://github.com/DanySK/gradle-cpd-plugin/commit/c5c63c5599aab665b8213715a71c130297fcbd24))
+* **release:** trigger a patch on PMD updates ([845835a](https://github.com/DanySK/gradle-cpd-plugin/commit/845835a07ee2fa54a33a2e314a41196d75f4bd10))
+* **renovate:**  include forks ([6d23c9e](https://github.com/DanySK/gradle-cpd-plugin/commit/6d23c9e564a9c939e5d26ccf4d841768b90b91d7))
+
 ## 1.0.0 (2024-11-15)
 
 ### ⚠ BREAKING CHANGES
