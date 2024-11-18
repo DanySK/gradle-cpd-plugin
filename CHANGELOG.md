@@ -1,3 +1,19 @@
+## [1.0.3](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.2...1.0.3) (2024-11-18)
+
+### Dependency updates
+
+* **core-deps:** update gradle to 8.0 ([19d3d6b](https://github.com/DanySK/gradle-cpd-plugin/commit/19d3d6b9aabb29dea6adf052a1c3a576443c0a60))
+* **deps:** update dependency com.google.guava:guava to v33.3.1-jre ([#6](https://github.com/DanySK/gradle-cpd-plugin/issues/6)) ([4bdad32](https://github.com/DanySK/gradle-cpd-plugin/commit/4bdad32f41dc72fb6c13a8bfc49c6b13a8088502))
+* **deps:** update junit5 monorepo to v5.11.3 ([#9](https://github.com/DanySK/gradle-cpd-plugin/issues/9)) ([4d22d4e](https://github.com/DanySK/gradle-cpd-plugin/commit/4d22d4e16eb4438b4c8c3e6c37584043ac8403cc))
+* **deps:** update mockito monorepo to v5.14.2 ([#10](https://github.com/DanySK/gradle-cpd-plugin/issues/10)) ([75a48af](https://github.com/DanySK/gradle-cpd-plugin/commit/75a48af40f08b5272791145181c5428a150d2cc8))
+* **deps:** update plugin multijvmtesting to v1.3.1 ([#16](https://github.com/DanySK/gradle-cpd-plugin/issues/16)) ([4bfce48](https://github.com/DanySK/gradle-cpd-plugin/commit/4bfce481e3673f830788f296adb4eef9215522aa))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.14 ([#18](https://github.com/DanySK/gradle-cpd-plugin/issues/18)) ([a27f663](https://github.com/DanySK/gradle-cpd-plugin/commit/a27f663f53cae7fd97bb99c0ed9749d67d390fa9))
+* **deps:** update plugin publishoncentral to v5.1.10 ([#17](https://github.com/DanySK/gradle-cpd-plugin/issues/17)) ([5f7eafb](https://github.com/DanySK/gradle-cpd-plugin/commit/5f7eafb8bfc8d8f05e975246e2a1e9d3481a6f01))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.17 ([#15](https://github.com/DanySK/gradle-cpd-plugin/issues/15)) ([8bae24c](https://github.com/DanySK/gradle-cpd-plugin/commit/8bae24cf52e9f1b1da9c0603cfd1f97338edab81))
+
 ## [1.0.2](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.1...1.0.2) (2024-11-15)
 
 ### Dependency updates
