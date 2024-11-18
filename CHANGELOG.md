@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.3...1.0.4) (2024-11-18)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.10.2 ([#21](https://github.com/DanySK/gradle-cpd-plugin/issues/21)) ([77d50dc](https://github.com/DanySK/gradle-cpd-plugin/commit/77d50dc8a29e86eaa557610dcd5e32cf3d878fff))
+
 ## [1.0.3](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.2...1.0.3) (2024-11-18)
 
 ### Dependency updates
