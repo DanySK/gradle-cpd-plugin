@@ -1,3 +1,25 @@
+## [2.0.0](https://github.com/DanySK/gradle-cpd-plugin/compare/1.1.0...2.0.0) (2024-11-19)
+
+### ⚠ BREAKING CHANGES
+
+* add support for PMD 7.3.0
+
+### Features
+
+* add support for PMD 7.3.0 ([54a6242](https://github.com/DanySK/gradle-cpd-plugin/commit/54a6242a451213430ee1be4a22f93ef631cb59dc))
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.6.0 ([#33](https://github.com/DanySK/gradle-cpd-plugin/issues/33)) ([a7cd936](https://github.com/DanySK/gradle-cpd-plugin/commit/a7cd93633017497fd8bbad69f2eea2efeb7d22ab))
+
+### Documentation
+
+* remove readme columns with versions not making sense anymore, document failOnErrors and failOnViolations ([484720a](https://github.com/DanySK/gradle-cpd-plugin/commit/484720ac6d12b097f60c25a79d0482c7551bc9c0))
+
+### Tests
+
+* avoid calling the deprecated Gradle `getBuildDir()` API ([773cd95](https://github.com/DanySK/gradle-cpd-plugin/commit/773cd953e570bed3c21a0b8c6a29d58586cc3c4e))
+
 ## [1.1.0](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.4...1.1.0) (2024-11-19)
 
 ### Features
