@@ -57,7 +57,7 @@ class CpdPluginTest {
         assertThat(cpd.isSkipLexicalErrors()).isFalse();
         assertThat(cpd.isSkipBlocks()).isTrue();
         assertThat(cpd.getSkipBlocksPattern()).isEqualTo(CpdLanguagePropertiesDefaults.DEFAULT_SKIP_BLOCKS_PATTERN);
-        assertThat(cpd.getToolVersion()).isEqualTo("7.2.0");
+        assertThat(cpd.getToolVersion()).isEqualTo(Cpd.defaultCPDVersion());
     }
 
     @Test

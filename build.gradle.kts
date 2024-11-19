@@ -65,6 +65,35 @@ val javaTestLauncher = javaToolchains.launcherFor(javaForTests)
 
 tasks {
 
+    val copyPmdVersion by registering {
+        inputs.file(File(rootProject.rootDir, "gradle/libs.versions.toml"))
+        val outputDir = project.layout.buildDirectory
+            .dir("resources/main/META-INF/cpd/")
+            .map { it.asFile }
+        outputs.dir(outputDir)
+        doLast {
+            val destinationDir = outputDir.get().also { it.mkdirs() }
+            val destination = File(destinationDir, "cpd-version")
+            val pmdVersion = file("${rootProject.rootDir.absolutePath}/gradle/libs.versions.toml")
+                .useLines { lines ->
+                    val regex by lazy { Regex("""pmd\s*=\s*\"([0-9\.]+)\"""") }
+                    val version = lines.takeWhile { "[libraries]" !in it }
+                        .mapNotNull { regex.matchEntire(it) }
+                        .map { it.groupValues[1] }
+                        .first()
+                    destination.writeText(version)
+                }
+        }
+    }
+
+    withType<JavaCompile>().configureEach {
+        dependsOn(copyPmdVersion)
+    }
+
+    withType<GroovyCompile>().configureEach {
+        dependsOn(copyPmdVersion)
+    }
+
     val integTest by registering(Test::class) {
         inputs.files(jar)
         shouldRunAfter(test)

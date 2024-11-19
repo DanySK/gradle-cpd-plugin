@@ -88,7 +88,7 @@ public class CpdPlugin implements Plugin<Project> {
 
     private CpdExtension createExtension(Project project) {
         CpdExtension extension = project.getExtensions().create("cpd", CpdExtension.class);
-        extension.setToolVersion("7.2.0");
+        extension.setToolVersion(Cpd.defaultCPDVersion());
         return extension;
     }
 

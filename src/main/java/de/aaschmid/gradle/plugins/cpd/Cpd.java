@@ -1,6 +1,12 @@
 package de.aaschmid.gradle.plugins.cpd;
 
 import javax.inject.Inject;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +39,8 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.VerificationTask;
 import org.gradle.util.internal.ConfigureUtil;
 import org.gradle.workers.WorkerExecutor;
+
+import static java.util.Objects.requireNonNull;
 
 
 /**
@@ -406,5 +414,18 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
 
     public void setSkipBlocksPattern(String skipBlocksPattern) {
         this.skipBlocksPattern = skipBlocksPattern;
+    }
+
+    public static String defaultCPDVersion() {
+        final URL resource = Thread.currentThread().getContextClassLoader().getResource("META-INF/cpd/cpd-version");
+        requireNonNull(resource, "Could not determine default CPD version.");
+        try (
+            final InputStream stream = resource.openStream();
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))
+        ) {
+            return reader.readLine();
+        } catch(IOException e) {
+            throw new IllegalStateException("Could not determine default CPD version.", e);
+        }
     }
 }
