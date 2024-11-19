@@ -9,6 +9,8 @@ import de.aaschmid.gradle.plugins.cpd.test.GradleExtension;
 import org.gradle.api.InvalidUserDataException;
 import org.gradle.api.Project;
 import org.gradle.api.Task;
+import org.gradle.api.file.RegularFile;
+import org.gradle.api.provider.Provider;
 import org.gradle.api.tasks.TaskProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -117,12 +119,12 @@ class CpdTest {
     void Cpd_shouldAllowConfigurationOfCpdTaskReportProperties(Project project, TaskProvider<Cpd> cpdCheck) {
         // When:
         cpdCheck.configure(task -> task.reports(reports -> {
-            reports.getCsv().getOutputLocation().set(project.file(project.getBuildDir() + "/cpdCheck.csv"));
+            reports.getCsv().getOutputLocation().set(fileInBuildDir(project, "cpdCheck.csv"));
             reports.getCsv().getRequired().set(true);
             reports.getCsv().setSeparator(';');
             reports.getCsv().setIncludeLineCount(false);
 
-            reports.getText().getOutputLocation().set(project.file(project.getBuildDir() + "/cpdCheck.text"));
+            reports.getText().getOutputLocation().set(fileInBuildDir(project, "cpdCheck.text"));
             reports.getText().getRequired().set(true);
             reports.getText().setLineSeparator("-_-");
             reports.getText().setTrimLeadingCommonSourceWhitespaces(true);
@@ -130,7 +132,7 @@ class CpdTest {
             reports.getVs().getOutputLocation().set(project.file("cpdCheck.vs"));
             reports.getVs().getRequired().set(true);
 
-            reports.getXml().getOutputLocation().set(project.file(project.getBuildDir() + "/reports/cpdCheck.xml"));
+            reports.getXml().getOutputLocation().set(fileInBuildDir(project, "reports/cpdCheck.xml"));
             reports.getXml().getRequired().set(false);
             reports.getXml().setEncoding("UTF-16");
         }));
@@ -157,7 +159,7 @@ class CpdTest {
         // Given:
         cpdCheck.configure(task -> {
             task.reports(report -> {
-                report.getText().getOutputLocation().set(project.file(project.getBuildDir() + "/cpdCheck.text"));
+                report.getText().getOutputLocation().set(fileInBuildDir(project, "cpdCheck.text"));
                 report.getText().getRequired().set(true);
             });
             task.source(testFile(JAVA, "de/aaschmid/clazz/"));
@@ -174,7 +176,7 @@ class CpdTest {
         // Given:
         cpdCheck.configure(task -> {
             task.reports(report -> {
-                report.getCsv().getOutputLocation().set(project.file(project.getBuildDir() + "/cpd.csv"));
+                report.getCsv().getOutputLocation().set(fileInBuildDir(project, "cpd.csv"));
                 report.getCsv().getRequired().set(false);
                 report.getText().getOutputLocation().set(project.file("cpdCheck.txt"));
                 report.getText().getRequired().set(true);
@@ -186,10 +188,10 @@ class CpdTest {
 
         // Expect:
         assertThat(actual.getOutputs().getFiles()).containsExactlyInAnyOrder(
-                project.file(project.getBuildDir() + "/cpd.csv"),
+                project.file(fileInBuildDir(project, "cpd.csv")),
                 project.file("cpdCheck.txt"),
                 project.file("cpd.vs"),
-                project.file(project.getBuildDir() + "/reports/cpd/cpdCheck.xml")
+                project.file(fileInBuildDir(project, "reports/cpd/cpdCheck.xml"))
         );
     }
 
@@ -245,5 +247,9 @@ class CpdTest {
 
         // Expect:
         assertThat(cpdCheck.get().getXmlRendererEncoding(report)).isEqualTo(expected);
+    }
+
+    private static Provider<RegularFile> fileInBuildDir(Project project, String path) {
+        return project.getLayout().getBuildDirectory().file(path);
     }
 }
