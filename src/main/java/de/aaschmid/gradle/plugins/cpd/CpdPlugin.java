@@ -107,6 +107,8 @@ public class CpdPlugin implements Plugin<Project> {
         project.getTasks().withType(Cpd.class).configureEach(task -> {
             ConventionMapping taskMapping = task.getConventionMapping();
             taskMapping.map("encoding", extension::getEncoding);
+            taskMapping.map("failOnError", extension::isFailOnError);
+            taskMapping.map("failOnViolation", extension::isFailOnViolation);
             taskMapping.map("ignoreAnnotations", extension::isIgnoreAnnotations);
             taskMapping.map("ignoreIdentifiers", extension::isIgnoreIdentifiers);
             taskMapping.map("ignoreFailures", extension::isIgnoreFailures);
@@ -115,8 +117,6 @@ public class CpdPlugin implements Plugin<Project> {
             taskMapping.map("minimumTokenCount", extension::getMinimumTokenCount);
             taskMapping.map("pmdClasspath", () -> project.getConfigurations().findByName("cpd"));
             taskMapping.map("skipDuplicateFiles", extension::isSkipDuplicateFiles);
-            taskMapping.map("failOnErrors", extension::isFailOnErrors);
-            taskMapping.map("failOnViolations", extension::isFailOnViolations);
             taskMapping.map("skipBlocks", extension::isSkipBlocks);
             taskMapping.map("skipBlocksPattern", extension::getSkipBlocksPattern);
 

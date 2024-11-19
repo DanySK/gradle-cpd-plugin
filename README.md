@@ -36,31 +36,7 @@ See also https://plugins.gradle.org/plugin/de.aaschmid.cpd.
 Requirements
 ------------
 
-This plugin requires [PMD](https://pmd.github.io/) greater or equal to version 7.0.0 such that ```toolVersion >= '7.0.0'```.
-
-Explanation: v7.0.0 changed the internal API, see [PMD release notes](https://pmd.github.io/pmd/pmd_release_notes_pmd7.html#-api).
-
-You can use older versions of this plugin if you want to use older versions of PMD (see table below).
-
-### Supported versions
-
-| G. CPD plugin | Gradle       | PMD          | Java¹  |
-|:--------------|:------------ |:-------------|:------ |
-| [v0.1][]      | 1.10 - 4.x   | 5.0.0 - 5.x  | 6 - 8  |
-| [v0.2][]      | 2.0 - 4.x    | 5.0.0 - 5.x  | 6 - 8  |
-| [v0.4][]      | 2.3 - 4.x    | 5.2.0 - 5.x  | 6 - 8  |
-| [v1.0][]      | 2.14 - 5.0   | 5.2.0 - 5.x  | 6 - 8  |
-| [v1.1][]      | 2.14 - 5.0   | 5.2.2 - 6.x  | 6 - 9  |
-| [v1.2][]      | >= 3.5.1     | 5.2.2 - 6.x  | >= 8   |
-| [v1.3][]      | >= 4.10.3    | 5.2.2 - 6.x  | >= 8   |
-| [v2.0][]      | 4.10.3 - 5.5 | 6.1.0 - 6.x  | >= 8   |
-| [v3.0][]      | 5.6 - 5.x    | 6.10.0 - 6.x | >= 8   |
-| [v3.1][]      | >= 5.6       | 6.10.0 - 6.x | >= 8   |
-| [v3.2][]      | >= 6.6       | 6.10.0 - 6.x | >= 8   |
-| [v3.3][]      | >= 6.6       | 6.10.0 - 6.x | >= 8   |
-| [v3.4][]      | >= 7.4       | >= 7.0.0     | >= 8   |
-
-¹: Java version may additionally depend on [PMD][]s version which is might not be properly reflected here.
+This plugin requires [PMD](https://pmd.github.io/) greater or equal to version 7.4.0 such that ```toolVersion >= '7.4.0'```.
 
 Usage
 -----
@@ -70,7 +46,7 @@ This plugin is available using either the new [Gradle plugins DSL](https://gradl
 
 ```groovy
 plugins {
-    id 'org.danilopianini.cpd' version '3.4.0'
+    id 'org.danilopianini.cpd' version '2.0.1' // pick the latest
 }
 ```
 
@@ -86,7 +62,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.danilopianini:gradle-cpd-plugin:3.4.0'
+        classpath 'org.danilopianini:gradle-cpd-plugin:2.0.1'
     }
 }
 apply plugin: 'org.danilopianini.cpd'
@@ -138,7 +114,7 @@ This example shows a project where only ```main``` sources should be checked for
 // optional - settings for every CPD task
 cpd {
     language = 'cpp'
-    toolVersion = '7.0.0' // defaults to '7.2.0'; just available for v7.0.0 and higher (see explanation above)
+    toolVersion = '7.4.0' // defaults to '7.7.0'; just available for v7.4.0 and higher (see explanation above)
 }
 
 // optional - default report is xml and default sources are 'main' and 'test'
@@ -219,6 +195,8 @@ e.g. using ```cpdCheck { }```:
 | Attribute          |        Default        | Applies for ```language``` |
 |--------------------|:---------------------:|:--------------------------:|
 | encoding           |    System default     |                            |
+| failOnError        |   ```true```          |                            |
+| failOnViolation    |      ```true```       |                            |
 | ignoreAnnotations  |      ```false```      | ```'java'```               |
 | ignoreFailures     |      ```false```      |                            |
 | ignoreIdentifiers  |      ```false```      | ```'java'```               |
@@ -226,8 +204,6 @@ e.g. using ```cpdCheck { }```:
 | language           |     ```'java'```      |                            |
 | minimumTokenCount  |       ```50```        |                            |
 | skipDuplicateFiles |      ```false```      |                            |
-| failOnErrors       |      ```false```      |                            |
-| failOnViolations   |      ```true```       |                            |
 | skipBlocks         |      ```true```       | ```'cpp'```                |
 | skipBlocksPattern  | ```'#if 0\|#endif'``` | ```'cpp'```               |
 
@@ -253,30 +229,5 @@ the example in [Usage](#usage) section above.
 `false` shows line count and `true` hides it, see
 [here](https://github.com/pmd/pmd/blob/master/pmd-core/src/main/java/net/sourceforge/pmd/cpd/CSVRenderer.java#L63).
 
-
-Contributing
-------------
-
-You are very welcome to contribute by providing a patch/pull request.
-
-Please note that running the test cases my take quite long because the acceptance test cases (see
-```de.aaschmid.gradle.plugins.cpd.test.CpdAcceptanceTest``` will download [CPD][] and its dependencies for every version. I recommend to
-get these dependencies in your ```localMaven()``` repository as the test cases look there for it first.
-
 [PMD]: https://pmd.github.io/
 [CPD]: https://pmd.github.io/latest/pmd_userdocs_cpd.html
-
-[v0.1]: /../../releases/tag/v0.1
-[v0.2]: /../../releases/tag/v0.2
-[v0.4]: /../../releases/tag/v0.4
-[v0.5]: /../../releases/tag/v0.5
-[v1.0]: /../../releases/tag/v1.0
-[v1.1]: /../../releases/tag/v1.1
-[v1.2]: /../../releases/tag/v1.2
-[v1.3]: /../../releases/tag/v1.3
-[v2.0]: /../../releases/tag/v2.0
-[v3.0]: /../../releases/tag/v3.0
-[v3.1]: /../../releases/tag/v3.1
-[v3.2]: /../../releases/tag/v3.2
-[v3.3]: /../../releases/tag/v3.3
-[v3.4]: /../../releases/tag/v3.4

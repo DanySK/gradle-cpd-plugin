@@ -24,14 +24,14 @@ import org.gradle.api.plugins.quality.CodeQualityExtension;
 public class CpdExtension extends CodeQualityExtension {
 
     private String encoding;
+    private boolean failOnError = true;
+    private boolean failOnViolation = true;
     private boolean ignoreAnnotations = false;
     private boolean ignoreIdentifiers = false;
     private boolean ignoreLiterals = false;
     private String language = "java";
     private int minimumTokenCount = 50;
     private boolean skipDuplicateFiles = false;
-    private boolean failOnErrors = false;
-    private boolean failOnViolations = true;
     private boolean skipBlocks = true;
     private String skipBlocksPattern = "#if 0|#endif";
 
@@ -151,18 +151,36 @@ public class CpdExtension extends CodeQualityExtension {
     }
 
     /**
-     * Skip files which cannot be tokenized due to invalid characters instead of aborting CPD; defaults to {@code false}.
+     * Whether CPD should exit with status 4 (the default behavior, true)
+     * if violations are found or just with 0 (to not break the build, e.g.).
      * <p>
-     * Example: {@code failOnErrors = true}
+     * Example: {@code failOnError = false}
      *
-     * @return whether lexical errors should be skipped
+     * @return whether CPD should fail on error
      */
-    public boolean isFailOnErrors() {
-        return failOnErrors;
+    public boolean isFailOnError() {
+        return failOnError;
     }
 
-    public void setFailOnErrors(boolean failOnErrors) {
-        this.failOnErrors = failOnErrors;
+    public void setFailOnError(boolean failOnError) {
+        this.failOnError = failOnError;
+    }
+
+    /**
+     * Whether PMD should exit with status 5 (the default behavior, true) if
+     * recoverable errors occurred or just with 0 (to not break the build,
+     * e.g. if the validation check fails).
+     * <p>
+     * Example: {@code failOnViolation = false}
+     *
+     * @return whether CPD should fail on violation
+     */
+    public boolean isFailOnViolation() {
+        return failOnViolation;
+    }
+
+    public void setFailOnViolation(boolean failOnViolation) {
+        this.failOnViolation = failOnViolation;
     }
 
     /**
@@ -197,13 +215,5 @@ public class CpdExtension extends CodeQualityExtension {
 
     public void setSkipBlocksPattern(String skipBlocksPattern) {
         this.skipBlocksPattern = skipBlocksPattern;
-    }
-
-    public boolean isFailOnViolations() {
-        return failOnViolations;
-    }
-
-    public void setFailOnViolations(boolean failOnViolations) {
-        this.failOnViolations = failOnViolations;
     }
 }
