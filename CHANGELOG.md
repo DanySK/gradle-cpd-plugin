@@ -1,3 +1,36 @@
+## [3.0.0](https://github.com/DanySK/gradle-cpd-plugin/compare/2.0.1...3.0.0) (2024-11-19)
+
+### ⚠ BREAKING CHANGES
+
+* pull from upstream
+
+### Features
+
+* pull from upstream ([634510c](https://github.com/DanySK/gradle-cpd-plugin/commit/634510cdc992862d18efa723e52a283533145a08))
+
+### Bug Fixes
+
+* add @Nonnull annotations ([f900d04](https://github.com/DanySK/gradle-cpd-plugin/commit/f900d0422465923284b4b2c0b65f472d06ec9f03))
+* add `@Nonnull` annotations ([2129e18](https://github.com/DanySK/gradle-cpd-plugin/commit/2129e189c884dda5fb5fd257b16c455818525d21))
+
+### Documentation
+
+* remove reference to non-found symbol ([c0f1aae](https://github.com/DanySK/gradle-cpd-plugin/commit/c0f1aaec55c437a3edaf969c38325ae068fed16c))
+* remove unused anchor ([9220a77](https://github.com/DanySK/gradle-cpd-plugin/commit/9220a77548cf8c423e9718cffb581e16589b35bf))
+* remove unused anchor ([8c73079](https://github.com/DanySK/gradle-cpd-plugin/commit/8c730790c5460f68a5b2ed09189d8de3702c046c))
+
+### Build and continuous integration
+
+* do not cancel in-progress builds ([471f26d](https://github.com/DanySK/gradle-cpd-plugin/commit/471f26d61ca2cd9ff27d9a20fb5dca4f5bea7728))
+* run build jobs concurrently ([49843e7](https://github.com/DanySK/gradle-cpd-plugin/commit/49843e7429d8c3cf5ba03fc531c387cc10a61625))
+
+### Style improvements
+
+* avoid raw types ([dd56190](https://github.com/DanySK/gradle-cpd-plugin/commit/dd56190d327c88c0c7a4ac2318c542898c96f854))
+* avoid raw types ([f0b0e6b](https://github.com/DanySK/gradle-cpd-plugin/commit/f0b0e6bae80054733283b1a5b9407f0546654702))
+* make `addReport` return void ([64de254](https://github.com/DanySK/gradle-cpd-plugin/commit/64de254199fd882eb51eaeaf6ec92a54f02e952f))
+* replace statement lambda with expression lambda ([a748162](https://github.com/DanySK/gradle-cpd-plugin/commit/a748162df0a9ee7e8b8ab2e2a1a70fa7d1151439))
+
 ## [2.0.1](https://github.com/DanySK/gradle-cpd-plugin/compare/2.0.0...2.0.1) (2024-11-19)
 
 ### Dependency updates
