@@ -74,7 +74,7 @@ tasks {
         doLast {
             val destinationDir = outputDir.get().also { it.mkdirs() }
             val destination = File(destinationDir, "cpd-version")
-            val pmdVersion = file("${rootProject.rootDir.absolutePath}/gradle/libs.versions.toml")
+            file("${rootProject.rootDir.absolutePath}/gradle/libs.versions.toml")
                 .useLines { lines ->
                     val regex by lazy { Regex("""pmd\s*=\s*\"([0-9\.]+)\"""") }
                     val version = lines.takeWhile { "[libraries]" !in it }
