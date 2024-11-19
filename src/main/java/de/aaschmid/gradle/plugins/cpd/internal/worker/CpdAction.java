@@ -57,7 +57,9 @@ public abstract class CpdAction implements WorkAction<CpdWorkParameters> {
         result.setOnlyRecognizeLanguage(createLanguage(config.getLanguage().get()));
         result.setMinimumTileSize(config.getMinimumTokenCount().get());
         result.setSkipDuplicates(config.getSkipDuplicateFiles().get());
-        result.setSkipLexicalErrors(config.getSkipLexicalErrors().get());
+        result.setFailOnError(config.getFailOnErrors().get());
+        result.setSkipLexicalErrors(!config.getFailOnErrors().get());
+        result.setFailOnViolation(config.getFailOnViolations().get());
         return result;
     }
 

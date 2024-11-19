@@ -96,7 +96,8 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
     private Integer minimumTokenCount;
     private FileCollection pmdClasspath;
     private boolean skipDuplicateFiles;
-    private boolean skipLexicalErrors;
+    private boolean failOnErrors;
+    private boolean failOnViolations = true;
     private boolean skipBlocks;
     private String skipBlocksPattern;
 
@@ -110,10 +111,9 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
     @TaskAction
     public void run() {
         checkTaskState();
-
         workerExecutor
-                .classLoaderIsolation(action -> action.getClasspath().setFrom(getPmdClasspath()))
-                .submit(CpdAction.class, getCpdWorkParameters());
+            .classLoaderIsolation(action -> action.getClasspath().setFrom(getPmdClasspath()))
+            .submit(CpdAction.class, getCpdWorkParameters());
     }
 
     private void checkTaskState() {
@@ -137,7 +137,8 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
             parameters.getSkipBlocks().set(getSkipBlocks());
             parameters.getSkipBlocksPattern().set(getSkipBlocksPattern());
             parameters.getSkipDuplicateFiles().set(getSkipDuplicateFiles());
-            parameters.getSkipLexicalErrors().set(getSkipLexicalErrors());
+            parameters.getFailOnErrors().set(getFailOnErrors());
+            parameters.getFailOnViolations().set(getfailOnViolations());
             parameters.getSourceFiles().setFrom(getSource().getFiles());
             parameters.getReportParameters().set(createReportParameters(getReports()));
         };
@@ -373,17 +374,27 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
     /**
      * Skip files which cannot be tokenized due to invalid characters instead of aborting CPD.
      * <p>
-     * Example: {@code skipLexicalErrors = true}
+     * Example: {@code failOnErrors = true}
      *
      * @return whether lexical errors should be skipped
      */
     @Input
-    public boolean getSkipLexicalErrors() {
-        return skipLexicalErrors;
+    public boolean getFailOnErrors() {
+        return failOnErrors;
     }
 
-    public void setSkipLexicalErrors(boolean skipLexicalErrors) {
-        this.skipLexicalErrors = skipLexicalErrors;
+    public void setFailOnErrors(boolean failOnErrors) {
+        this.failOnErrors = failOnErrors;
+    }
+
+
+    @Input
+    public boolean getfailOnViolations() {
+        return failOnViolations;
+    }
+
+    public void setFailOnViolations(boolean failOnViolations) {
+        this.failOnViolations = failOnViolations;
     }
 
     /**

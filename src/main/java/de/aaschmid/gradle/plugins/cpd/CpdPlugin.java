@@ -115,7 +115,8 @@ public class CpdPlugin implements Plugin<Project> {
             taskMapping.map("minimumTokenCount", extension::getMinimumTokenCount);
             taskMapping.map("pmdClasspath", () -> project.getConfigurations().findByName("cpd"));
             taskMapping.map("skipDuplicateFiles", extension::isSkipDuplicateFiles);
-            taskMapping.map("skipLexicalErrors", extension::isSkipLexicalErrors);
+            taskMapping.map("failOnErrors", extension::isFailOnErrors);
+            taskMapping.map("failOnViolations", extension::isFailOnViolations);
             taskMapping.map("skipBlocks", extension::isSkipBlocks);
             taskMapping.map("skipBlocksPattern", extension::getSkipBlocksPattern);
 

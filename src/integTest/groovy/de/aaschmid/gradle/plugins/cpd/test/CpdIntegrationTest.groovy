@@ -1,5 +1,6 @@
 package de.aaschmid.gradle.plugins.cpd.test
 
+import de.aaschmid.gradle.plugins.cpd.Cpd
 import spock.lang.Issue
 
 import static de.aaschmid.gradle.plugins.cpd.test.TestFileResolver.Lang.*
@@ -190,7 +191,7 @@ class CpdIntegrationTest extends IntegrationBaseSpec {
         given:
         buildFileWithPluginAndRepos() << """
             cpd{
-                toolVersion = '7.0.0'
+                toolVersion = '${Cpd.defaultCPDVersion()}'
             }
             cpdCheck{
                 ignoreFailures = true

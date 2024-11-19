@@ -41,8 +41,7 @@ sourceSets {
 
 dependencies {
     implementation(gradleApi())
-    compileOnly(libs.pmd.dist)
-    testImplementation(libs.pmd.dist)
+    implementation(libs.pmd.dist)
     testImplementation(libs.guava)
     testImplementation(libs.bundles.testing.base)
     "integTestImplementation"(libs.bundles.testing.integration) {

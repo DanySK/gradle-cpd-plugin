@@ -548,11 +548,11 @@ class CpdAcceptanceTest extends IntegrationBaseSpec {
     }
 
 
-    def "Cpd should fail if not skipLexicalErrors on files containing lexical errors"() {
+    def "Cpd should fail if failOnErrors on files containing lexical errors"() {
         given:
         buildFileWithPluginAndRepos() << """
             cpdCheck{
-                skipLexicalErrors = false
+                failOnErrors = true
                 source = ${testPath(JAVA, 'de/aaschmid/lexical')}
             }
             """.stripIndent()
@@ -569,11 +569,11 @@ class CpdAcceptanceTest extends IntegrationBaseSpec {
         !report.exists()
     }
 
-    def "Cpd should not fail if skipLexicalErrors on files containing lexical errors"() {
+    def "Cpd should not fail if not failOnError on files containing lexical errors"() {
         given:
         buildFileWithPluginAndRepos() << """
             cpdCheck{
-                skipLexicalErrors = true
+                failOnErrors = false
                 source = ${testPath(JAVA, 'de/aaschmid/lexical')}
             }
             """.stripIndent()
@@ -587,7 +587,7 @@ class CpdAcceptanceTest extends IntegrationBaseSpec {
 
         def report = file('build/reports/cpd/cpdCheck.xml')
         report.exists()
-        report.text =~ /<pmd-cpd\/>/
+        report.text =~ /<\/pmd-cpd>/
     }
 
     def "Cpd should be up-to-date on second run with same input"() {

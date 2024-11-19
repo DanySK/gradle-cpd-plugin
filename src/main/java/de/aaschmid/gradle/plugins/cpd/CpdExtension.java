@@ -30,7 +30,8 @@ public class CpdExtension extends CodeQualityExtension {
     private String language = "java";
     private int minimumTokenCount = 50;
     private boolean skipDuplicateFiles = false;
-    private boolean skipLexicalErrors = false;
+    private boolean failOnErrors = false;
+    private boolean failOnViolations = true;
     private boolean skipBlocks = true;
     private String skipBlocksPattern = "#if 0|#endif";
 
@@ -152,16 +153,16 @@ public class CpdExtension extends CodeQualityExtension {
     /**
      * Skip files which cannot be tokenized due to invalid characters instead of aborting CPD; defaults to {@code false}.
      * <p>
-     * Example: {@code skipLexicalErrors = true}
+     * Example: {@code failOnErrors = true}
      *
      * @return whether lexical errors should be skipped
      */
-    public boolean isSkipLexicalErrors() {
-        return skipLexicalErrors;
+    public boolean isFailOnErrors() {
+        return failOnErrors;
     }
 
-    public void setSkipLexicalErrors(boolean skipLexicalErrors) {
-        this.skipLexicalErrors = skipLexicalErrors;
+    public void setFailOnErrors(boolean failOnErrors) {
+        this.failOnErrors = failOnErrors;
     }
 
     /**
@@ -196,5 +197,13 @@ public class CpdExtension extends CodeQualityExtension {
 
     public void setSkipBlocksPattern(String skipBlocksPattern) {
         this.skipBlocksPattern = skipBlocksPattern;
+    }
+
+    public boolean isFailOnViolations() {
+        return failOnViolations;
+    }
+
+    public void setFailOnViolations(boolean failOnViolations) {
+        this.failOnViolations = failOnViolations;
     }
 }

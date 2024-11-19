@@ -90,7 +90,8 @@ class CpdTest {
             task.setMinimumTokenCount(10);
             task.setPmdClasspath(project.files(expectedPmdClasspath));
             task.setSkipDuplicateFiles(true);
-            task.setSkipLexicalErrors(true);
+            task.setFailOnErrors(true);
+            task.setFailOnViolations(true);
             task.setSkipBlocks(false);
             task.setSkipBlocksPattern("<template|>");
         });
@@ -106,7 +107,8 @@ class CpdTest {
         assertThat(actual.getMinimumTokenCount()).isEqualTo(10);
         assertThat(actual.getPmdClasspath()).containsExactlyInAnyOrderElementsOf(expectedPmdClasspath);
         assertThat(actual.getSkipDuplicateFiles()).isTrue();
-        assertThat(actual.getSkipLexicalErrors()).isTrue();
+        assertThat(actual.getFailOnErrors()).isTrue();
+        assertThat(actual.getfailOnViolations()).isTrue();
         assertThat(actual.getSkipBlocks()).isFalse();
         assertThat(actual.getSkipBlocksPattern()).isEqualTo("<template|>");
     }
@@ -163,7 +165,7 @@ class CpdTest {
         Cpd actual = cpdCheck.get();
 
         // Expect:
-        assertThat(actual.getInputs().getProperties()).hasSize(50);
+        assertThat(actual.getInputs().getProperties()).hasSize(51);
         assertThat(actual.getInputs().getSourceFiles()).containsExactlyInAnyOrderElementsOf(testFilesRecurseIn(JAVA, "de/aaschmid/clazz"));
     }
 

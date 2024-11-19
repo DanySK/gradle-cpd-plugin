@@ -32,7 +32,9 @@ public interface CpdWorkParameters extends WorkParameters {
 
     Property<Boolean> getSkipDuplicateFiles();
 
-    Property<Boolean> getSkipLexicalErrors();
+    Property<Boolean> getFailOnErrors();
+
+    Property<Boolean> getFailOnViolations();
 
     ConfigurableFileCollection getSourceFiles();
 
