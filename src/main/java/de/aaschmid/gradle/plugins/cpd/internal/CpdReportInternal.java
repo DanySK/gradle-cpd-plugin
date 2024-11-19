@@ -22,9 +22,15 @@ public abstract class CpdReportInternal implements SingleFileReport {
         this.name = name;
         this.task = task;
         getRequired().convention(false);
-        getOutputLocation().convention(getProjectLayout().file(new DefaultProvider<>(() -> {
-            return ((IConventionAware) CpdReportInternal.this).getConventionMapping().getConventionValue(null, "destination", false);
-        })));
+        getOutputLocation().convention(
+            getProjectLayout().file(
+                new DefaultProvider<>(() ->
+                    ((IConventionAware) CpdReportInternal.this)
+                        .getConventionMapping()
+                        .getConventionValue(null, "destination", false)
+                )
+            )
+        );
     }
 
     @Inject
