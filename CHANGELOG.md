@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/DanySK/gradle-cpd-plugin/compare/2.0.0...2.0.1) (2024-11-19)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.7.0 ([#34](https://github.com/DanySK/gradle-cpd-plugin/issues/34)) ([e953996](https://github.com/DanySK/gradle-cpd-plugin/commit/e953996d08160e21bcd2fc443e07ab873f3f1b66))
+
 ## [2.0.0](https://github.com/DanySK/gradle-cpd-plugin/compare/1.1.0...2.0.0) (2024-11-19)
 
 ### ⚠ BREAKING CHANGES
