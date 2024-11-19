@@ -33,7 +33,7 @@ public abstract class CpdReportInternal implements SingleFileReport {
 
     @Override
     public Report configure(Closure cl) {
-        final Closure closure = (Closure) cl.clone();
+        final Closure<?> closure = (Closure<?>) cl.clone();
         closure.setResolveStrategy(Closure.DELEGATE_FIRST);
         closure.setDelegate(this);
         closure.call(this);
