@@ -1,5 +1,6 @@
 package de.aaschmid.gradle.plugins.cpd;
 
+import javax.annotation.Nonnull;
 import javax.inject.Inject;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -192,6 +193,7 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
         return encoding;
     }
 
+    @Nonnull
     @Override
     @InputFiles
     @SkipWhenEmpty
@@ -200,17 +202,20 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
         return super.getSource();
     }
 
+    @Nonnull
     @Override
-    public CpdReports reports(@DelegatesTo(value = CpdReports.class, strategy = Closure.DELEGATE_FIRST) Closure closure) {
+    public CpdReports reports(@Nonnull @DelegatesTo(value = CpdReports.class, strategy = Closure.DELEGATE_FIRST) Closure closure) {
         return reports(ConfigureUtil.configureUsing(closure));
     }
 
+    @Nonnull
     @Override
     @Nested
     public CpdReports getReports() {
         return reports;
     }
 
+    @Nonnull
     @Override
     public CpdReports reports(Action<? super CpdReports> action) {
         action.execute(this.reports);
