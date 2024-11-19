@@ -40,8 +40,8 @@ public class Reports<T extends Report> implements ReportContainer<T> {
         return this.enabled;
     }
 
-    protected boolean addReport(final T report) {
-        return this.reports.add(report);
+    protected void addReport(final T report) {
+        this.reports.add(report);
     }
 
     @Override
