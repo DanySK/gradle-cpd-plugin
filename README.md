@@ -19,7 +19,6 @@ Gradle CPD plugin
 * [Requirements](#requirements)
 * [Usage](#usage)
 * [Options](#options)
-* [Contributing](#contributing)
 * [Release notes](/../../releases)
 
 
