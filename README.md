@@ -209,8 +209,6 @@ If a specified `language` cannot be found, analysis fails.
 
 For more information about options and their descriptions, see [here](https://pmd.github.io/latest/pmd_userdocs_cpd.html#attribute-reference),
 and for the available programming languages have a look on [CPD documentation](https://pmd.github.io/latest/pmd_userdocs_cpd.html#supported-languages).
-To request more options, please file an issue [here](/../../issues).
-
 
 Additionally, one can configure the following reports for every task analogous to
 [Reporting](https://gradle.org/docs/current/dsl/org.gradle.api.reporting.Reporting.html) as for any other reporting plugin. See also
