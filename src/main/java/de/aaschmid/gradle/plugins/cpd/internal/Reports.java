@@ -311,7 +311,7 @@ public class Reports<T extends Report> implements ReportContainer<T> {
 
     @Override
     public ReportContainer<T> configure(final Closure closure) {
-        final Closure cl = (Closure) closure.clone();
+        final Closure<?> cl = (Closure<?>) closure.clone();
         cl.setResolveStrategy(Closure.DELEGATE_FIRST);
         cl.setDelegate(this);
         cl.call(this);
