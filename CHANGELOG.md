@@ -1,3 +1,18 @@
+## [1.1.0](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.4...1.1.0) (2024-11-19)
+
+### Features
+
+* lock the version of PMD and use it throughout the project ([993abb0](https://github.com/DanySK/gradle-cpd-plugin/commit/993abb0ee57eb4f18ac1e7407830b4dfd72ca127))
+
+### Bug Fixes
+
+* annotate with @Nonnull methods and parameters annotated as @Nonnull in superclasses ([1addb24](https://github.com/DanySK/gradle-cpd-plugin/commit/1addb24ebdd4958c896432eb4b8f5258d17aa4bd))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.18 ([#29](https://github.com/DanySK/gradle-cpd-plugin/issues/29)) ([877a961](https://github.com/DanySK/gradle-cpd-plugin/commit/877a961a9974a9849608b98e542eb1ef3f358324))
+* remove unused variable ([abf6990](https://github.com/DanySK/gradle-cpd-plugin/commit/abf699049d8aa10d0e6256b0634275353aad0a3a))
+
 ## [1.0.4](https://github.com/DanySK/gradle-cpd-plugin/compare/1.0.3...1.0.4) (2024-11-18)
 
 ### Dependency updates
