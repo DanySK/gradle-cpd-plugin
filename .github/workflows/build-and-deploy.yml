@@ -26,11 +26,13 @@ jobs:
             drop
             --parallel
           should-run-codecov: ${{ runner.os == 'Linux' }}
+          # Disable the dry-deployment to relieve OSSRH
           should-deploy: >-
             ${{
               runner.os == 'Linux'
               && github.repository_owner == 'DanySK'
               && github.event_name != 'pull_request'
+              && false
             }}
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
