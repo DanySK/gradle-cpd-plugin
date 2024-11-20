@@ -31,6 +31,8 @@ jobs:
               runner.os == 'Linux'
               && github.repository_owner == 'DanySK'
               && github.event_name != 'pull_request'
+              # Disable dry-deployment to relieve OSSRH
+              && false
             }}
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
