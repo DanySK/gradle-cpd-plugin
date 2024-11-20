@@ -1,3 +1,14 @@
+## [3.0.1](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.0...3.0.1) (2024-11-20)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.11 ([#22](https://github.com/DanySK/gradle-cpd-plugin/issues/22)) ([a3eee5a](https://github.com/DanySK/gradle-cpd-plugin/commit/a3eee5ab34cedc98561b51d9da5475efcd4423d2))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.20 ([#35](https://github.com/DanySK/gradle-cpd-plugin/issues/35)) ([0596dbc](https://github.com/DanySK/gradle-cpd-plugin/commit/0596dbcbb6b8157bf0765c265fbcc1a06e0f1bce))
+* disable dry-deployments on Maven Central to relieve OSSRH ([#36](https://github.com/DanySK/gradle-cpd-plugin/issues/36)) ([aba6741](https://github.com/DanySK/gradle-cpd-plugin/commit/aba67412943bf2a3717be8904065baf39ed5489f))
+
 ## [3.0.0](https://github.com/DanySK/gradle-cpd-plugin/compare/2.0.1...3.0.0) (2024-11-19)
 
 ### ⚠ BREAKING CHANGES
