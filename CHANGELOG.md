@@ -1,3 +1,18 @@
+## [3.0.3](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.2...3.0.3) (2024-11-30)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.8.0 ([#44](https://github.com/DanySK/gradle-cpd-plugin/issues/44)) ([43e529d](https://github.com/DanySK/gradle-cpd-plugin/commit/43e529d65ddfdf629401c5863ee6da45828a9c42))
+* **deps:** update plugin multijvmtesting to v1.3.2 ([#39](https://github.com/DanySK/gradle-cpd-plugin/issues/39)) ([ccaa53d](https://github.com/DanySK/gradle-cpd-plugin/commit/ccaa53dba38537dee3d7ddc98d2b2e3d817884a7))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.15 ([#40](https://github.com/DanySK/gradle-cpd-plugin/issues/40)) ([b141959](https://github.com/DanySK/gradle-cpd-plugin/commit/b1419595e7b386faed0d866d4fe196e0d9e2f79e))
+* **deps:** update plugin publishoncentral to v5.1.11 ([#42](https://github.com/DanySK/gradle-cpd-plugin/issues/42)) ([70e4605](https://github.com/DanySK/gradle-cpd-plugin/commit/70e460557ed6992cd5d515504dc1c991a473910d))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.21 ([#38](https://github.com/DanySK/gradle-cpd-plugin/issues/38)) ([8da2180](https://github.com/DanySK/gradle-cpd-plugin/commit/8da21802bb4ca9667463474636833a0897a6ec90))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.22 ([#41](https://github.com/DanySK/gradle-cpd-plugin/issues/41)) ([6cca2c1](https://github.com/DanySK/gradle-cpd-plugin/commit/6cca2c13ae01b2146a74e013663335779a6d961f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.23 ([#43](https://github.com/DanySK/gradle-cpd-plugin/issues/43)) ([845550b](https://github.com/DanySK/gradle-cpd-plugin/commit/845550b7982957ddd14b4f3278b526ea7c69202b))
+
 ## [3.0.2](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.1...3.0.2) (2024-11-20)
 
 ### Dependency updates
