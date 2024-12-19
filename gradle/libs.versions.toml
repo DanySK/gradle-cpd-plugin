@@ -4,7 +4,7 @@ mockito = "5.14.2"
 pmd = "7.8.0"
 
 [libraries]
-assertj-core = "org.assertj:assertj-core:3.26.3"
+assertj-core = "org.assertj:assertj-core:3.27.0"
 guava = "com.google.guava:guava:33.4.0-jre"
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
