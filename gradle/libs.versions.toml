@@ -1,7 +1,7 @@
 [versions]
 junit = "5.11.4"
 mockito = "5.17.0"
-pmd = "7.12.0"
+pmd = "7.13.0"
 
 [libraries]
 assertj-core = "org.assertj:assertj-core:3.27.3"
