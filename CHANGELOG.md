@@ -1,3 +1,24 @@
+## [3.0.13](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.12...3.0.13) (2025-05-22)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14.1 ([#176](https://github.com/DanySK/gradle-cpd-plugin/issues/176)) ([bf25bd4](https://github.com/DanySK/gradle-cpd-plugin/commit/bf25bd44927fde4eef9cf0b349ad853bd3274a79))
+* **deps:** update dependency org.mockito:mockito-core to v5.18.0 ([#175](https://github.com/DanySK/gradle-cpd-plugin/issues/175)) ([d7ca8e2](https://github.com/DanySK/gradle-cpd-plugin/commit/d7ca8e2c28802f0425b4ce67730a6aae5fde5258))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.126 ([#165](https://github.com/DanySK/gradle-cpd-plugin/issues/165)) ([7396afb](https://github.com/DanySK/gradle-cpd-plugin/commit/7396afb7cc75c7a697dc1ff61b389bd8131d2fe0))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([#166](https://github.com/DanySK/gradle-cpd-plugin/issues/166)) ([f3f12f1](https://github.com/DanySK/gradle-cpd-plugin/commit/f3f12f14335a0133e64cda53098ab9c6b89bfac6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.128 ([#172](https://github.com/DanySK/gradle-cpd-plugin/issues/172)) ([8710b86](https://github.com/DanySK/gradle-cpd-plugin/commit/8710b86c339e3a7d3df714055a7b1610e2d0d0a5))
+* **deps:** update plugin gitsemver to v5.1.3 ([#169](https://github.com/DanySK/gradle-cpd-plugin/issues/169)) ([34889fd](https://github.com/DanySK/gradle-cpd-plugin/commit/34889fde0e13de539dfa8d964f23f3d3420720c6))
+* **deps:** update plugin multijvmtesting to v3.4.2 ([#170](https://github.com/DanySK/gradle-cpd-plugin/issues/170)) ([184c58d](https://github.com/DanySK/gradle-cpd-plugin/commit/184c58dcc23e793945b2450623e6e32fb4e34f34))
+* **deps:** update plugin multijvmtesting to v3.4.3 ([#177](https://github.com/DanySK/gradle-cpd-plugin/issues/177)) ([968b562](https://github.com/DanySK/gradle-cpd-plugin/commit/968b562a86369adc5618a86ef91ef5a257fe8358))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.24 ([#171](https://github.com/DanySK/gradle-cpd-plugin/issues/171)) ([f28de4a](https://github.com/DanySK/gradle-cpd-plugin/commit/f28de4ac4d6f2e40e3ece36406f93e94c2480446))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v1 ([#174](https://github.com/DanySK/gradle-cpd-plugin/issues/174)) ([9f87e2c](https://github.com/DanySK/gradle-cpd-plugin/commit/9f87e2cf3981f66f6c0fd3b0a4282d60e8535bb3))
+* **deps:** update plugin publishoncentral to v8.0.7 ([#167](https://github.com/DanySK/gradle-cpd-plugin/issues/167)) ([6674248](https://github.com/DanySK/gradle-cpd-plugin/commit/6674248bc8f1b3d4c03f9a978d06e8767fa95b0a))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.18 ([#168](https://github.com/DanySK/gradle-cpd-plugin/issues/168)) ([7c2dc36](https://github.com/DanySK/gradle-cpd-plugin/commit/7c2dc36ce9aa7345fc5f3989dc0716df2fafe0c6))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.20 ([#173](https://github.com/DanySK/gradle-cpd-plugin/issues/173)) ([08508c3](https://github.com/DanySK/gradle-cpd-plugin/commit/08508c3f0d7d6dbd2ea98835c91127f2e2e67494))
+
 ## [3.0.12](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.11...3.0.12) (2025-04-26)
 
 ### Dependency updates
