@@ -42,8 +42,10 @@ sourceSets {
 dependencies {
     implementation(gradleApi())
     implementation(libs.pmd.dist)
+    testImplementation(platform(libs.junit.bom))
     testImplementation(libs.guava)
     testImplementation(libs.bundles.testing.base)
+    "integTestImplementation"(platform(libs.junit.bom))
     "integTestImplementation"(libs.bundles.testing.integration) {
         exclude(module = "groovy-all")
     }
