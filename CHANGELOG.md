@@ -1,3 +1,19 @@
+## [3.0.14](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.13...3.0.14) (2025-05-30)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.14.0 ([#187](https://github.com/DanySK/gradle-cpd-plugin/issues/187)) ([2bb52c1](https://github.com/DanySK/gradle-cpd-plugin/commit/2bb52c14c4f532aae17f47123a6c314a8d324b52))
+* **deps:** update dependency org.junit:junit-bom to v5.13.0 ([#186](https://github.com/DanySK/gradle-cpd-plugin/issues/186)) ([594e322](https://github.com/DanySK/gradle-cpd-plugin/commit/594e322809985064bc961622af2cafc99a6b79f4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.129 ([#179](https://github.com/DanySK/gradle-cpd-plugin/issues/179)) ([cf44356](https://github.com/DanySK/gradle-cpd-plugin/commit/cf44356847310c7bdc66d53974ada1197de824e3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.130 ([#181](https://github.com/DanySK/gradle-cpd-plugin/issues/181)) ([50442d5](https://github.com/DanySK/gradle-cpd-plugin/commit/50442d525aefc8bacebb6e576a46be46fe33e015))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.131 ([#182](https://github.com/DanySK/gradle-cpd-plugin/issues/182)) ([ae34132](https://github.com/DanySK/gradle-cpd-plugin/commit/ae3413276e8e785146fdc509a4d0d6a93eb2be75))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.132 ([#185](https://github.com/DanySK/gradle-cpd-plugin/issues/185)) ([4473045](https://github.com/DanySK/gradle-cpd-plugin/commit/4473045bb78f01bb4fd0e0d7b7fd1e827242c022))
+* **deps:** update junit5 monorepo to v5.12.2 (minor) ([a261fc0](https://github.com/DanySK/gradle-cpd-plugin/commit/a261fc070fa508e106e4dfa140d6297123ed985c))
+* **deps:** update node.js to 22.16 ([#180](https://github.com/DanySK/gradle-cpd-plugin/issues/180)) ([6e8fee9](https://github.com/DanySK/gradle-cpd-plugin/commit/6e8fee9925dc47af48663ed0b8efe70b955ce68e))
+* **deps:** update plugin com.gradle.develocity to v4.0.2 ([#183](https://github.com/DanySK/gradle-cpd-plugin/issues/183)) ([cf99dfe](https://github.com/DanySK/gradle-cpd-plugin/commit/cf99dfe6cda761b893c92c318aeddffc93990511))
+* **deps:** update plugin multijvmtesting to v3.5.0 ([#184](https://github.com/DanySK/gradle-cpd-plugin/issues/184)) ([f662707](https://github.com/DanySK/gradle-cpd-plugin/commit/f662707af25604765b47832ea516b0aa12151bc7))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.25 ([#178](https://github.com/DanySK/gradle-cpd-plugin/issues/178)) ([8f44c81](https://github.com/DanySK/gradle-cpd-plugin/commit/8f44c81f1897cce4432cd9ca0bd8580ebb7fcfb8))
+
 ## [3.0.13](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.12...3.0.13) (2025-05-22)
 
 ### Dependency updates
