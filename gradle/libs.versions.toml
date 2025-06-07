@@ -1,5 +1,5 @@
 [versions]
-junit = "5.13.0"
+junit = "5.13.1"
 mockito = "5.18.0"
 pmd = "7.14.0"
 
