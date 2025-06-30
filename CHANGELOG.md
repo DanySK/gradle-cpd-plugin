@@ -1,3 +1,15 @@
+## [3.0.17](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.16...3.0.17) (2025-06-30)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.134 ([#207](https://github.com/DanySK/gradle-cpd-plugin/issues/207)) ([8907e1d](https://github.com/DanySK/gradle-cpd-plugin/commit/8907e1dd28a83c0fc2ea86c19511d28ecfc0334f))
+* **deps:** update plugin gitsemver to v5.1.5 ([#206](https://github.com/DanySK/gradle-cpd-plugin/issues/206)) ([4fe6e8e](https://github.com/DanySK/gradle-cpd-plugin/commit/4fe6e8e1de9a3f36c848e1cfdafe00447bd98b47))
+* **deps:** update plugin publishoncentral to v9.0.6 ([#205](https://github.com/DanySK/gradle-cpd-plugin/issues/205)) ([1524157](https://github.com/DanySK/gradle-cpd-plugin/commit/1524157b0217884db06dfb6bf3a18f9ee857ca27))
+
+### Bug Fixes
+
+* **release:** switch to Maven Central Portal ([9a54302](https://github.com/DanySK/gradle-cpd-plugin/commit/9a54302b23e522cb186335c4628e46241498bd6f))
+
 ## [3.0.16](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.15...3.0.16) (2025-06-27)
 
 ### Dependency updates
