@@ -1,3 +1,12 @@
+## [3.0.18](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.17...3.0.18) (2025-07-04)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14.3 ([#211](https://github.com/DanySK/gradle-cpd-plugin/issues/211)) ([47d2a5b](https://github.com/DanySK/gradle-cpd-plugin/commit/47d2a5bb301e57378904c607c25e2bdd387d8021))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.135 ([#210](https://github.com/DanySK/gradle-cpd-plugin/issues/210)) ([1bbc876](https://github.com/DanySK/gradle-cpd-plugin/commit/1bbc876bedf08ff36b37e82b5b21445445b7b128))
+* **deps:** update plugin gitsemver to v5.1.6 ([#208](https://github.com/DanySK/gradle-cpd-plugin/issues/208)) ([8b96b25](https://github.com/DanySK/gradle-cpd-plugin/commit/8b96b25a1b74acdcd9b932f3b9591de40ff562c2))
+* **deps:** update plugin multijvmtesting to v3.5.3 ([#209](https://github.com/DanySK/gradle-cpd-plugin/issues/209)) ([06dab43](https://github.com/DanySK/gradle-cpd-plugin/commit/06dab438b1bd8cb1970eb36d4b2c276a945d02cc))
+
 ## [3.0.17](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.16...3.0.17) (2025-06-30)
 
 ### Dependency updates
