@@ -1,3 +1,34 @@
+## [4.0.0](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.19...4.0.0) (2025-08-12)
+
+### ⚠ BREAKING CHANGES
+
+* **core-deps:** update dependency gradle to v9 and org.spockframework:spock-core to v2.3-groovy-4.0. Require Java 17 (#241)
+
+### Dependency updates
+
+* **deps:** update dependency org.assertj:assertj-core to v3.27.4 ([#230](https://github.com/DanySK/gradle-cpd-plugin/issues/230)) ([d04072c](https://github.com/DanySK/gradle-cpd-plugin/commit/d04072c87b5eab31efa7b1058078116b9b2ef8cf))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.139 ([#229](https://github.com/DanySK/gradle-cpd-plugin/issues/229)) ([b03fc8d](https://github.com/DanySK/gradle-cpd-plugin/commit/b03fc8d6d65e76bc388e6a81473a9dadb8ea117d))
+* **deps:** update node.js to 22.18 ([#227](https://github.com/DanySK/gradle-cpd-plugin/issues/227)) ([9165cf8](https://github.com/DanySK/gradle-cpd-plugin/commit/9165cf85fd665ac9a44d5899891d6d5a363f0aa9))
+* **deps:** update plugin gitsemver to v5.1.8 ([#238](https://github.com/DanySK/gradle-cpd-plugin/issues/238)) ([4213ecd](https://github.com/DanySK/gradle-cpd-plugin/commit/4213ecd73eeb09fb600fc56a2bae4964cb7b4275))
+* **deps:** update plugin gitsemver to v6 ([#239](https://github.com/DanySK/gradle-cpd-plugin/issues/239)) ([06d0c42](https://github.com/DanySK/gradle-cpd-plugin/commit/06d0c426e68c642628578d096c68597122c3ecdd))
+* **deps:** update plugin multijvmtesting to v3.6.1 ([#232](https://github.com/DanySK/gradle-cpd-plugin/issues/232)) ([9240788](https://github.com/DanySK/gradle-cpd-plugin/commit/9240788833fea294b78e9e64c14c542b9728b225))
+* **deps:** update plugin multijvmtesting to v4 ([#233](https://github.com/DanySK/gradle-cpd-plugin/issues/233)) ([a25cfbb](https://github.com/DanySK/gradle-cpd-plugin/commit/a25cfbb1482f1f2fcfdf7b690ebdb018af77e3b5))
+* **deps:** update plugin publishoncentral to v9.1.0 ([#225](https://github.com/DanySK/gradle-cpd-plugin/issues/225)) ([ec80c82](https://github.com/DanySK/gradle-cpd-plugin/commit/ec80c82e04d091f94edf447da76f196f3326f0ed))
+
+### Bug Fixes
+
+* **core-deps:** update dependency gradle to v9 and org.spockframework:spock-core to v2.3-groovy-4.0. Require Java 17 ([#241](https://github.com/DanySK/gradle-cpd-plugin/issues/241)) ([98eb022](https://github.com/DanySK/gradle-cpd-plugin/commit/98eb0224b5d25e78473cbf00a92fee4fb874a2f9))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.3.0 ([#234](https://github.com/DanySK/gradle-cpd-plugin/issues/234)) ([a55bfeb](https://github.com/DanySK/gradle-cpd-plugin/commit/a55bfebd07b7bde8f58d8cc6dfe2bd170eb4c275))
+* **deps:** update actions/checkout action to v5 ([#235](https://github.com/DanySK/gradle-cpd-plugin/issues/235)) ([03dce09](https://github.com/DanySK/gradle-cpd-plugin/commit/03dce09aba3513696ec83b8847a89568700600b0))
+* **deps:** update danysk/action-checkout action to v0.2.23 ([#236](https://github.com/DanySK/gradle-cpd-plugin/issues/236)) ([204bd18](https://github.com/DanySK/gradle-cpd-plugin/commit/204bd18dcc7d62b43cdc1d459c733ead081caf00))
+* **deps:** update danysk/action-checkout action to v0.2.24 ([#237](https://github.com/DanySK/gradle-cpd-plugin/issues/237)) ([7386416](https://github.com/DanySK/gradle-cpd-plugin/commit/73864168fe3e0dd48fa8eebddb749e883d9a63f4))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.2 ([#228](https://github.com/DanySK/gradle-cpd-plugin/issues/228)) ([02db20f](https://github.com/DanySK/gradle-cpd-plugin/commit/02db20f7a37937536f854a4ed272cc716c17d384))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.3 ([#231](https://github.com/DanySK/gradle-cpd-plugin/issues/231)) ([087dfab](https://github.com/DanySK/gradle-cpd-plugin/commit/087dfaba64f6b9f2e6c9791ec89376e8858301b2))
+* remove `inner` from a top-level script class ([#240](https://github.com/DanySK/gradle-cpd-plugin/issues/240)) ([9c8fa69](https://github.com/DanySK/gradle-cpd-plugin/commit/9c8fa69ea6bb4209cd437d564e3f454ca34590ab))
+
 ## [3.0.19](https://github.com/DanySK/gradle-cpd-plugin/compare/3.0.18...3.0.19) (2025-07-25)
 
 ### Dependency updates
