@@ -56,11 +56,11 @@ jacoco {
 }
 
 multiJvm {
-    jvmVersionForCompilation.set(8)
+    jvmVersionForCompilation.set(17)
     testByDefaultWith(latestLts, latestJavaSupportedByGradle)
 }
 
-val javaForTests: JavaToolchainSpec.() -> Unit = { languageVersion.set(JavaLanguageVersion.of(11)) }
+val javaForTests: JavaToolchainSpec.() -> Unit = { languageVersion.set(JavaLanguageVersion.of(17)) }
 val javaTestCompiler = javaToolchains.compilerFor(javaForTests)
 val javaTestLauncher = javaToolchains.launcherFor(javaForTests)
 

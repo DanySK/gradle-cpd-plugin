@@ -9,15 +9,14 @@ guava = "com.google.guava:guava:33.4.8-jre"
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
-junit-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
 pmd-dist = { module = "net.sourceforge.pmd:pmd-dist", version.ref = "pmd" }
-spock-core = "org.spockframework:spock-core:2.3-groovy-3.0"
+spock-core = "org.spockframework:spock-core:2.3-groovy-4.0"
 
 [bundles]
 testing-base = [ "assertj-core", "junit-jupiter",  "junit-platform-launcher", "mockito-core", "mockito-junit-jupiter" ]
-testing-integration = [ "assertj-core", "junit-vintage-engine", "spock-core" ]
+testing-integration = [ "assertj-core", "junit-jupiter", "junit-platform-launcher", "spock-core" ]
 
 [plugins]
 gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning:6.0.0"

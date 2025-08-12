@@ -29,11 +29,24 @@ abstract class IntegrationBaseSpec extends Specification {
         settingsFile = testProjectDir.resolve('settings.gradle').toFile()
     }
 
-    protected File withSubProjects(String... subProjects) {
-        if (subProjects.length > 0) {
-            settingsFile << """
-                include '${subProjects.join("', '")}'
-            """.stripIndent()
+    protected File withSubProjects(String... names) {
+        if (names.length == 0) {
+            return settingsFile
+        }
+        // 1) Tell Gradle about the subprojects
+        settingsFile << """
+            include ${names.collect { "'$it'" }.join(', ')}
+        """.stripIndent()
+        // 2) Physically create the subproject dirs + minimal build files
+        names.each { name ->
+            File dir = file(name)
+            if (!dir.exists() && !dir.mkdirs()) {
+                throw new IOException("Could not create directory for subproject '$name' at ${dir.absolutePath}")
+            }
+            File subBuild = new File(dir, 'build.gradle')
+            if (!subBuild.exists()) {
+                subBuild.text = ''
+            }
         }
         return settingsFile
     }
