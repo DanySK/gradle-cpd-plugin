@@ -14,7 +14,7 @@ plugins {
 description = "Gradle plugin to find duplicate code using PMDs copy/paste detection (= CPD)"
 group = "org.danilopianini"
 
-inner class ProjectInfo {
+class ProjectInfo {
     val longName = "CPD Gradle Plugin"
     val website = "https://github.com/DanySK/$name"
     val vcsUrl = "$website.git"
