@@ -59,11 +59,6 @@ public abstract class CpdReportInternal implements SingleFileReport {
         return name;
     }
 
-    @Override
-    public void setDestination(@Nonnull File file) {
-        getOutputLocation().fileValue(file);
-    }
-
     @Nonnull
     @Override
     public OutputType getOutputType() {

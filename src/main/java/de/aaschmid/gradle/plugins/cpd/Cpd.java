@@ -38,6 +38,7 @@ import org.gradle.api.tasks.SkipWhenEmpty;
 import org.gradle.api.tasks.SourceTask;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.VerificationTask;
+import org.gradle.api.tasks.util.internal.PatternSetFactory;
 import org.gradle.util.internal.ConfigureUtil;
 import org.gradle.workers.WorkerExecutor;
 
@@ -183,6 +184,13 @@ public class Cpd extends SourceTask implements VerificationTask, Reporting<CpdRe
             encoding = providerFactory.systemProperty("file.encoding").get();
         }
         return encoding;
+    }
+
+    @Inject
+    @Override
+    protected PatternSetFactory getPatternSetFactory() {
+        // Gradle injects this at runtime; this body should never execute.
+        throw new UnsupportedOperationException("Injected by Gradle");
     }
 
     // VisibleForTesting
