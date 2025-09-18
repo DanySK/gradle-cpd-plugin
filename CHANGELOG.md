@@ -1,3 +1,13 @@
+## [4.0.2](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.1...4.0.2) (2025-09-18)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.1.0 ([#276](https://github.com/DanySK/gradle-cpd-plugin/issues/276)) ([218db0c](https://github.com/DanySK/gradle-cpd-plugin/commit/218db0cdbbbbc61d5da3379cb764bfccc237dd78))
+* **deps:** update dependency com.google.guava:guava to v33.5.0-jre ([#275](https://github.com/DanySK/gradle-cpd-plugin/issues/275)) ([9bfac7d](https://github.com/DanySK/gradle-cpd-plugin/commit/9bfac7dbd41b7aa2fba398744c6efd46a50cc4eb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.144 ([#273](https://github.com/DanySK/gradle-cpd-plugin/issues/273)) ([797a178](https://github.com/DanySK/gradle-cpd-plugin/commit/797a178bf5528f6069cc3b6807f59b04867ee27d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.145 ([#274](https://github.com/DanySK/gradle-cpd-plugin/issues/274)) ([a6830dd](https://github.com/DanySK/gradle-cpd-plugin/commit/a6830dd2b53390f9f46398eb7d073193a2a9058c))
+* **deps:** update plugin com.gradle.develocity to v4.2 ([#272](https://github.com/DanySK/gradle-cpd-plugin/issues/272)) ([ce1a0d3](https://github.com/DanySK/gradle-cpd-plugin/commit/ce1a0d3899794b32dde9684db4e5262bb169a4bc))
+
 ## [4.0.1](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.0...4.0.1) (2025-09-13)
 
 ### Dependency updates
