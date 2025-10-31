@@ -1,3 +1,11 @@
+## [4.0.4](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.3...4.0.4) (2025-10-31)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.18.0 ([#314](https://github.com/DanySK/gradle-cpd-plugin/issues/314)) ([c5774ed](https://github.com/DanySK/gradle-cpd-plugin/commit/c5774ed5a6323ef019aa109fe96b0c553f74db2a))
+* **deps:** update node.js to v24 ([#313](https://github.com/DanySK/gradle-cpd-plugin/issues/313)) ([cde1534](https://github.com/DanySK/gradle-cpd-plugin/commit/cde15348940895847f11396d4d865832d246ad82))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.4 ([#312](https://github.com/DanySK/gradle-cpd-plugin/issues/312)) ([6d0a785](https://github.com/DanySK/gradle-cpd-plugin/commit/6d0a785a5895580ee12cb8cb2c539a22fa67e72c))
+
 ## [4.0.3](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.2...4.0.3) (2025-10-30)
 
 ### Dependency updates
