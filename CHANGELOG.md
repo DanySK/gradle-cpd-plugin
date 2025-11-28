@@ -1,3 +1,16 @@
+## [4.0.6](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.5...4.0.6) (2025-11-28)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.19.0 ([#331](https://github.com/DanySK/gradle-cpd-plugin/issues/331)) ([c79ebf6](https://github.com/DanySK/gradle-cpd-plugin/commit/c79ebf617e86676bcc942c14aad4ee18526638d2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.157 ([#330](https://github.com/DanySK/gradle-cpd-plugin/issues/330)) ([a3ef1b6](https://github.com/DanySK/gradle-cpd-plugin/commit/a3ef1b6402e79c8ede8cf36a1d194168a1110df5))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v5.0.1 ([#325](https://github.com/DanySK/gradle-cpd-plugin/issues/325)) ([7bcc638](https://github.com/DanySK/gradle-cpd-plugin/commit/7bcc638b1ed8cfc345f48c7bf51e622b008125b1))
+* **deps:** update actions/checkout action to v6 ([#329](https://github.com/DanySK/gradle-cpd-plugin/issues/329)) ([67e4cfc](https://github.com/DanySK/gradle-cpd-plugin/commit/67e4cfc37f60f9b21a98b246555e53d3d77d2852))
+* **deps:** update danysk/action-checkout action to v0.2.26 ([#328](https://github.com/DanySK/gradle-cpd-plugin/issues/328)) ([2198e45](https://github.com/DanySK/gradle-cpd-plugin/commit/2198e45573e893dde8d7173617270bfd2cc64b57))
+
 ## [4.0.5](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.4...4.0.5) (2025-11-18)
 
 ### Dependency updates
