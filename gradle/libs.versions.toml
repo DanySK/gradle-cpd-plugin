@@ -1,6 +1,6 @@
 [versions]
 junit = "6.0.1"
-mockito = "5.20.0"
+mockito = "5.21.0"
 pmd = "7.19.0"
 
 [libraries]
