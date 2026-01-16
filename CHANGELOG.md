@@ -1,3 +1,18 @@
+## [4.0.8](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.7...4.0.8) (2026-01-16)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.3.0 ([#353](https://github.com/DanySK/gradle-cpd-plugin/issues/353)) ([2bf2916](https://github.com/DanySK/gradle-cpd-plugin/commit/2bf2916af64a802362581a2ff940e0fb02df12c8))
+* **deps:** update dependency org.junit:junit-bom to v6.0.2 ([#347](https://github.com/DanySK/gradle-cpd-plugin/issues/347)) ([913b9fd](https://github.com/DanySK/gradle-cpd-plugin/commit/913b9fdd7c77fbf617d61b90ddd5d98e264faf70))
+* **deps:** update node.js to 24.13 ([#349](https://github.com/DanySK/gradle-cpd-plugin/issues/349)) ([a079ac3](https://github.com/DanySK/gradle-cpd-plugin/commit/a079ac341a12b3a2cc7eeb6d0ec9724790e975dc))
+* **deps:** update plugin com.gradle.develocity to v4.3.1 ([#351](https://github.com/DanySK/gradle-cpd-plugin/issues/351)) ([77d4c82](https://github.com/DanySK/gradle-cpd-plugin/commit/77d4c826ee3975048203ab97da978ae5e340d829))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.7 ([#352](https://github.com/DanySK/gradle-cpd-plugin/issues/352)) ([06a9cbc](https://github.com/DanySK/gradle-cpd-plugin/commit/06a9cbc355d042793c6f3712c043d772006d1786))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.2.0 ([#350](https://github.com/DanySK/gradle-cpd-plugin/issues/350)) ([5156c72](https://github.com/DanySK/gradle-cpd-plugin/commit/5156c725c94a4a6a5ca09baf6c2ac458c235bd0e))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.18 ([#348](https://github.com/DanySK/gradle-cpd-plugin/issues/348)) ([5f31236](https://github.com/DanySK/gradle-cpd-plugin/commit/5f312367b814c847365ea35d42dfa6d531f4f834))
+
 ## [4.0.7](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.6...4.0.7) (2025-12-30)
 
 ### Dependency updates
