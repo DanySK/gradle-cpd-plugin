@@ -1,3 +1,12 @@
+## [4.0.10](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.9...4.0.10) (2026-01-30)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.21.0 ([#370](https://github.com/DanySK/gradle-cpd-plugin/issues/370)) ([ef2f241](https://github.com/DanySK/gradle-cpd-plugin/commit/ef2f241e2081506c3bb8548ccbf4b8ed08fc1f89))
+* **deps:** update plugin gitsemver to v7.0.11 ([#368](https://github.com/DanySK/gradle-cpd-plugin/issues/368)) ([ede4390](https://github.com/DanySK/gradle-cpd-plugin/commit/ede4390f1b87e95b1ad07056fbc2f5ed233dbb80))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.8 ([#367](https://github.com/DanySK/gradle-cpd-plugin/issues/367)) ([529b48e](https://github.com/DanySK/gradle-cpd-plugin/commit/529b48e2842dbd5675f75e80cacd320eea06d7ca))
+* **deps:** update plugin publishoncentral to v9.1.12 ([#369](https://github.com/DanySK/gradle-cpd-plugin/issues/369)) ([24e2bc3](https://github.com/DanySK/gradle-cpd-plugin/commit/24e2bc385fd18f243176c88fc07caa54e378fb25))
+
 ## [4.0.9](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.8...4.0.9) (2026-01-29)
 
 ### Dependency updates
