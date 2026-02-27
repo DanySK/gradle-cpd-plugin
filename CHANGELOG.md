@@ -1,3 +1,19 @@
+## [4.0.11](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.10...4.0.11) (2026-02-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.22.0 ([#378](https://github.com/DanySK/gradle-cpd-plugin/issues/378)) ([1cbdb9c](https://github.com/DanySK/gradle-cpd-plugin/commit/1cbdb9c3e979d2d6ca609e024500dd6709a794d5))
+* **deps:** update dependency org.junit:junit-bom to v6.0.3 ([#375](https://github.com/DanySK/gradle-cpd-plugin/issues/375)) ([fa3da22](https://github.com/DanySK/gradle-cpd-plugin/commit/fa3da22ee475200ce65cfc1d4145b283e0abed2d))
+* **deps:** update node.js to 24.14 ([#377](https://github.com/DanySK/gradle-cpd-plugin/issues/377)) ([72e4782](https://github.com/DanySK/gradle-cpd-plugin/commit/72e4782f14208251b5c0282777cc2cc27487cd2c))
+* **deps:** update plugin gitsemver to v7.0.12 ([#373](https://github.com/DanySK/gradle-cpd-plugin/issues/373)) ([d28de88](https://github.com/DanySK/gradle-cpd-plugin/commit/d28de88dca0f82548458e72bc92e0656bf099235))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.9 ([#372](https://github.com/DanySK/gradle-cpd-plugin/issues/372)) ([c722723](https://github.com/DanySK/gradle-cpd-plugin/commit/c722723e346bea559190418e8df4fa9c470413bc))
+* **deps:** update plugin publishoncentral to v9.1.13 ([#374](https://github.com/DanySK/gradle-cpd-plugin/issues/374)) ([4da4cf8](https://github.com/DanySK/gradle-cpd-plugin/commit/4da4cf8a1c0e626fbcb1259882c060dfc377a77d))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.23 ([#371](https://github.com/DanySK/gradle-cpd-plugin/issues/371)) ([6bb20ea](https://github.com/DanySK/gradle-cpd-plugin/commit/6bb20ea55ba416c4cb97673f2e71a12b893659f1))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.24 ([#376](https://github.com/DanySK/gradle-cpd-plugin/issues/376)) ([ea14371](https://github.com/DanySK/gradle-cpd-plugin/commit/ea14371cc0ab7501e3b0879c022fc2304f46d7d4))
+
 ## [4.0.10](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.9...4.0.10) (2026-01-30)
 
 ### Dependency updates
