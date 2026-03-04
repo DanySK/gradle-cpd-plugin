@@ -1,3 +1,15 @@
+## [4.0.12](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.11...4.0.12) (2026-03-04)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.4.0 ([#382](https://github.com/DanySK/gradle-cpd-plugin/issues/382)) ([8ed2b57](https://github.com/DanySK/gradle-cpd-plugin/commit/8ed2b573f753f18c0407396218d80529252070f9))
+* **deps:** update mockito monorepo to v5.22.0 ([#379](https://github.com/DanySK/gradle-cpd-plugin/issues/379)) ([0059595](https://github.com/DanySK/gradle-cpd-plugin/commit/0059595bafc0d6e9799e63a4b45b83c1cdf0f3f8))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.10 ([#381](https://github.com/DanySK/gradle-cpd-plugin/issues/381)) ([0950180](https://github.com/DanySK/gradle-cpd-plugin/commit/09501806785712795877921e05cdb604c75a9205))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.3.0 ([#380](https://github.com/DanySK/gradle-cpd-plugin/issues/380)) ([5bbdfc2](https://github.com/DanySK/gradle-cpd-plugin/commit/5bbdfc23060cee937da23d0251e381f7202bfa05))
+
 ## [4.0.11](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.10...4.0.11) (2026-02-27)
 
 ### Dependency updates
