@@ -1,3 +1,13 @@
+## [4.0.16](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.15...4.0.16) (2026-05-02)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.5.0 ([#417](https://github.com/DanySK/gradle-cpd-plugin/issues/417)) ([a2a7f03](https://github.com/DanySK/gradle-cpd-plugin/commit/a2a7f03ed17a75a7b614716b23c5c426889b8493))
+* **deps:** update plugin gitsemver to v7.0.18 ([#415](https://github.com/DanySK/gradle-cpd-plugin/issues/415)) ([f1f1f47](https://github.com/DanySK/gradle-cpd-plugin/commit/f1f1f472b7f0ae8db8335079ae58ad3f512fafa8))
+* **deps:** update plugin multijvmtesting to v4.3.4 ([#419](https://github.com/DanySK/gradle-cpd-plugin/issues/419)) ([6c821f8](https://github.com/DanySK/gradle-cpd-plugin/commit/6c821f8e777a21bda89934657c5d23c98d95f1e8))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.16 ([#416](https://github.com/DanySK/gradle-cpd-plugin/issues/416)) ([6be67bc](https://github.com/DanySK/gradle-cpd-plugin/commit/6be67bc19cbd26011af3603b84b6883cce3948d0))
+* **deps:** update plugin publishoncentral to v9.2.2 ([#418](https://github.com/DanySK/gradle-cpd-plugin/issues/418)) ([8f1bf62](https://github.com/DanySK/gradle-cpd-plugin/commit/8f1bf629f415a2348f6c6d2aaa44854492cc3985))
+
 ## [4.0.15](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.14...4.0.15) (2026-04-24)
 
 ### Dependency updates
