@@ -1,3 +1,11 @@
+## [4.0.17](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.16...4.0.17) (2026-05-12)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.5.1 ([#422](https://github.com/DanySK/gradle-cpd-plugin/issues/422)) ([0fdd31e](https://github.com/DanySK/gradle-cpd-plugin/commit/0fdd31ea8daaae42c567e8e2a435e886ed84ac1f))
+* **deps:** update plugin multijvmtesting to v4.3.5 ([#420](https://github.com/DanySK/gradle-cpd-plugin/issues/420)) ([fa0bb7d](https://github.com/DanySK/gradle-cpd-plugin/commit/fa0bb7d48d16a83fa0e5f791394013212436992e))
+* **deps:** update plugin publishoncentral to v9.2.3 ([#421](https://github.com/DanySK/gradle-cpd-plugin/issues/421)) ([f1675f5](https://github.com/DanySK/gradle-cpd-plugin/commit/f1675f54a047488afb11b2b5fb371bd4877bb7f2))
+
 ## [4.0.16](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.15...4.0.16) (2026-05-02)
 
 ### Dependency updates
