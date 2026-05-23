@@ -95,6 +95,12 @@ tasks {
         dependsOn(copyPmdVersion)
     }
 
+    named<GroovyCompile>("compileIntegTestGroovy") {
+        val embeddedGroovyPathSegment = "${File.separator}gradle-${gradle.gradleVersion}${File.separator}lib${File.separator}groovy-"
+        classpath = classpath.filter { embeddedGroovyPathSegment !in it.path }
+        groovyClasspath = classpath.filter { it.name.startsWith("groovy-") }
+    }
+
     val integTest by registering(Test::class) {
         inputs.files(jar)
         shouldRunAfter(test)
