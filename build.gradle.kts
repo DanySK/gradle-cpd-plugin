@@ -63,6 +63,8 @@ multiJvm {
 val javaForTests: JavaToolchainSpec.() -> Unit = { languageVersion.set(JavaLanguageVersion.of(17)) }
 val javaTestCompiler = javaToolchains.compilerFor(javaForTests)
 val javaTestLauncher = javaToolchains.launcherFor(javaForTests)
+val groovy4JarPattern = Regex("""^groovy(?:-.+)?-4\..+\.jar$""")
+val groovy5JarPattern = Regex("""^groovy(?:-.+)?-5\..+\.jar$""")
 
 tasks {
 
@@ -96,9 +98,8 @@ tasks {
     }
 
     named<GroovyCompile>("compileIntegTestGroovy") {
-        val embeddedGroovyPathSegment = "${File.separator}gradle-${gradle.gradleVersion}${File.separator}lib${File.separator}groovy-"
-        classpath = classpath.filter { embeddedGroovyPathSegment !in it.path }
-        groovyClasspath = classpath.filter { it.name.startsWith("groovy-") }
+        classpath = classpath.filter { !groovy4JarPattern.matches(it.name) }
+        groovyClasspath = classpath.filter { groovy5JarPattern.matches(it.name) }
     }
 
     val integTest by registering(Test::class) {
