@@ -1,3 +1,25 @@
+## [4.0.18](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.17...4.0.18) (2026-05-24)
+
+### Dependency updates
+
+* **deps:** update dependency org.junit:junit-bom to v6.1.0 ([#429](https://github.com/DanySK/gradle-cpd-plugin/issues/429)) ([2656f98](https://github.com/DanySK/gradle-cpd-plugin/commit/2656f98d89a992fec22f4694475fa2e0059055f9))
+* **deps:** update dependency org.spockframework:spock-core to v2.4-groovy-5.0 ([3ca071d](https://github.com/DanySK/gradle-cpd-plugin/commit/3ca071de882bc011f75b4eef38daf4b5699cd643))
+* **deps:** update node.js to 24.16 ([#430](https://github.com/DanySK/gradle-cpd-plugin/issues/430)) ([55007f9](https://github.com/DanySK/gradle-cpd-plugin/commit/55007f911ed97e17233805b9755f4580e6adff58))
+* **deps:** update plugin gitsemver to v7.0.19 ([#423](https://github.com/DanySK/gradle-cpd-plugin/issues/423)) ([1eebd81](https://github.com/DanySK/gradle-cpd-plugin/commit/1eebd81dd8f426e75e63230f61272afd1978016f))
+* **deps:** update plugin gitsemver to v7.0.20 ([#428](https://github.com/DanySK/gradle-cpd-plugin/issues/428)) ([9e9a114](https://github.com/DanySK/gradle-cpd-plugin/commit/9e9a114606145c6b93517b72d330b53a0460faa1))
+* **deps:** update plugin multijvmtesting to v4.3.6 ([#425](https://github.com/DanySK/gradle-cpd-plugin/issues/425)) ([72d5b09](https://github.com/DanySK/gradle-cpd-plugin/commit/72d5b09a53463d7b8ef1a14523813c8c7fb7c44a))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.17 ([#424](https://github.com/DanySK/gradle-cpd-plugin/issues/424)) ([59ee7da](https://github.com/DanySK/gradle-cpd-plugin/commit/59ee7da7e61b282eabba615297f0e9d662745774))
+* **deps:** update plugin publishoncentral to v9.2.4 ([#426](https://github.com/DanySK/gradle-cpd-plugin/issues/426)) ([0d6b535](https://github.com/DanySK/gradle-cpd-plugin/commit/0d6b53510890b74822c94dc1cb4b04be4580c9a3))
+
+### Bug Fixes
+
+* isolate Groovy 5 for Spock integration tests ([df275c3](https://github.com/DanySK/gradle-cpd-plugin/commit/df275c3a926c536cda189e88da6c593f2408f2bf))
+* keep Groovy 4 off Spock compile classpath ([4a0d9a4](https://github.com/DanySK/gradle-cpd-plugin/commit/4a0d9a4eb97ba77614f7bfcb32f1e8d275277561))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.33 ([#427](https://github.com/DanySK/gradle-cpd-plugin/issues/427)) ([67c267c](https://github.com/DanySK/gradle-cpd-plugin/commit/67c267c2b5db47ea7b47812b206197c97dcbf636))
+
 ## [4.0.17](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.16...4.0.17) (2026-05-12)
 
 ### Dependency updates
