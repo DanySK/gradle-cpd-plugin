@@ -1,3 +1,11 @@
+## [4.0.19](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.18...4.0.19) (2026-05-29)
+
+### Dependency updates
+
+* **core-deps:** update dependency net.sourceforge.pmd:pmd-dist to v7.25.0 ([#434](https://github.com/DanySK/gradle-cpd-plugin/issues/434)) ([dd2a851](https://github.com/DanySK/gradle-cpd-plugin/commit/dd2a85192c9c55cf37898fa1a3d1562d09a4c1e8))
+* **deps:** update plugin multijvmtesting to v4.4.0 ([#431](https://github.com/DanySK/gradle-cpd-plugin/issues/431)) ([552d244](https://github.com/DanySK/gradle-cpd-plugin/commit/552d244d8a54ba75866e44823665fc1e9026769a))
+* **deps:** update plugin multijvmtesting to v4.5.0 ([#432](https://github.com/DanySK/gradle-cpd-plugin/issues/432)) ([87e5c90](https://github.com/DanySK/gradle-cpd-plugin/commit/87e5c907ff6fc9835edfcce9911c4437a1952e3c))
+
 ## [4.0.18](https://github.com/DanySK/gradle-cpd-plugin/compare/4.0.17...4.0.18) (2026-05-24)
 
 ### Dependency updates
